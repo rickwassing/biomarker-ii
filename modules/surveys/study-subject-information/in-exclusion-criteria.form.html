@@ -1,0 +1,537 @@
+<link href="../../layout/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<!-- javascript links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../js/rt-javascript.js"></script>
+
+<section>
+    VmInclude:__COMPONENT__/toolbar/back_save.html
+
+    <table width=100% style="width:100%"><tr><td align="center">
+
+        <form id=F__ID>
+            <table id=tb__ID>
+
+                <!-- Survey header -->
+                <tr><td class='title__ID'>
+                    <span class="survey-title">Inclusion and exclusion criteria</span>
+                </td></tr>
+
+                <!-- Set participant -->
+                <tr id=tr_participant__ID style='display:none'><td data-id=Participant data-custom=1>
+                    <input name=Participant  id=Participant__ID  type=text class=sel__ID placeholder='select a partcipant...'/>
+                    <input name=Participant_uid id=Participant_uid__ID type=text readonly />
+                    <u style='cursor:pointer;float:right;' id=Participant_r__ID>Remove</u>
+                </td></tr>
+
+                <!-- Question set header -->
+                <tr><td class='header__ID'>
+                    <span class=survey-h1>Inclusion criteria</span>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Age is between 25 and 65 years</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=age name=age id=age-1 value=1 />
+                    <label for=age-1 class="survey-answer radio-first">yes</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=age name=age id=age-0 value=0 />
+                    <label for=age-0 class="survey-answer">no</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Current driver's license</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=driversLicence name=driversLicence id=driversLicence-1 value=1 />
+                    <label for=driversLicence-1 class="survey-answer radio-first">yes</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=driversLicence name=driversLicence id=driversLicence-0 value=0 />
+                    <label for=driversLicence-0 class="survey-answer">no</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Are you able to speak and write in English?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=englishLanguage name=englishLanguage id=englishLanguage-1 value=1 />
+                    <label for=englishLanguage-1 class="survey-answer radio-first">yes</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=englishLanguage name=englishLanguage id=englishLanguage-0 value=0 />
+                    <label for=englishLanguage-0 class="survey-answer">no</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Is it likely that the participant can perform neurobehavioral tests?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=performNeurobehTests name=performNeurobehTests id=performNeurobehTests-1 value=1 />
+                    <label for=performNeurobehTests-1 class="survey-answer radio-first">yes</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=performNeurobehTests name=performNeurobehTests id=performNeurobehTests-0 value=0 />
+                    <label for=performNeurobehTests-0 class="survey-answer">no</label>
+                </td></tr>
+
+                <!-- Question set header -->
+                <tr><td class='header__ID'>
+                    <span class=survey-h1>Exclusion criteria</span>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Are you a night-shift worker (i.e. between 1 am and 6 am)?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=nighShiftWorker name=nighShiftWorker id=nighShiftWorker-0 value=0 />
+                    <label for=nighShiftWorker-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=nighShiftWorker name=nighShiftWorker id=nighShiftWorker-1 value=1 />
+                    <label for=nighShiftWorker-1 class="survey-answer">yes</label>
+
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, provide details, exclude if participant did shift-work in past 6 months</label>
+                    <input type=text placeholder='Provide details...' class=input_box_large__ID data-custom=1 data-id=nighShiftWorker_specify  name=nighShiftWorker_specify  id=nighShiftWorker_specify  />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Are you an <u>in</u>experienced driver? (< 2 hrs/week and < 2 years).</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=inexperiencedDriver name=inexperiencedDriver id=inexperiencedDriver-0 value=0 />
+                    <label for=inexperiencedDriver-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=inexperiencedDriver name=inexperiencedDriver id=inexperiencedDriver-1 value=1 />
+                    <label for=inexperiencedDriver-1 class="survey-answer">yes (exclude)</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Are you currently pregnant or breastfeeding (female) or do you care for a new-born?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=newBornCaretaker name=newBornCaretaker id=newBornCaretaker-0 value=0 />
+                    <label for=newBornCaretaker-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=newBornCaretaker name=newBornCaretaker id=newBornCaretaker-1 value=1 />
+                    <label for=newBornCaretaker-1 class="survey-answer">yes (exclude)</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you participated in another clinical research study trial in the last 12 months?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=prevClinicalTrial name=prevClinicalTrial id=prevClinicalTrial-0 value=0 />
+                    <label for=prevClinicalTrial-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=prevClinicalTrial name=prevClinicalTrial id=prevClinicalTrial-1 value=1 />
+                    <label for=prevClinicalTrial-1 class="survey-answer">yes</label>
+
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, exclude if the study included treatment component, but consider inclusion if the study was observational in nature. Please record details of the trial.</label>
+                    <input type=text placeholder='Where...' class=input_box_large__ID data-custom=1 data-id=prevClinicalTrial_where  name=prevClinicalTrial_where  id=prevClinicalTrial_where  />
+                    <input type=text placeholder='When...' class=input_box_large__ID data-custom=1 data-id=prevClinicalTrial_when  name=prevClinicalTrial_when  id=prevClinicalTrial_when  />
+                    <input type=text placeholder='What diagnosis...' class=input_box_large__ID data-custom=1 data-id=prevClinicalTrial_diagnosis  name=prevClinicalTrial_diagnosis  id=prevClinicalTrial_diagnosis  />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Do you smoke?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=smoker name=smoker id=smoker-0 value=0 />
+                    <label for=smoker-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=smoker name=smoker id=smoker-1 value=1 />
+                    <label for=smoker-1 class="survey-answer">yes (exclude)</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have been taking any recreational drugs in the last 60 days?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=drugUse name=drugUse id=drugUse-0 value=0 />
+                    <label for=drugUse-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=drugUse name=drugUse id=drugUse-1 value=1 />
+                    <label for=drugUse-1 class="survey-answer">yes (exclude)</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Do you drink alcohol?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=alcUse name=alcUse id=alcUse-0 value=0 />
+                    <label for=alcUse-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=alcUse name=alcUse id=alcUse-1 value=1 />
+                    <label for=alcUse-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, how many days a week do you drink at least one drink?</label>
+                    <input type=text placeholder='... days' class=input_box_large__ID data-custom=1 data-id=alcUse_days  name=alcUse_days  id=alcUse_days  />
+                    <label class="survey-subquestion">On those days that you drink, how many standard drinks do you consume?</label>
+                    <input type=text placeholder='... standard drinks' class=input_box_large__ID data-custom=1 data-id=alcUse_amount  name=alcUse_amount  id=alcUse_amount  />
+                    <label class="survey-subquestion">Exclude if regularly drinks alcohol equivalent to > 4 standard drinks/day. A standard drink is approximately 1 glass (285 ml) of full strength beer, 1 glass (100 ml) of wine, 60 ml of fortified wine (20% alcohol), 30 ml of spirits (40% alcohol).</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you travelled overseas in the past 2 months?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=travel name=travel id=travel-0 value=0 />
+                    <label for=travel-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=travel name=travel id=travel-1 value=1 />
+                    <label for=travel-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, exclude if into time zone > 2 hours different to our local clock time (i.e. transmeridian travel).</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Do you have any allergies?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=allergies name=allergies id=allergies-0 value=0 />
+                    <label for=allergies-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=allergies name=allergies id=allergies-1 value=1 />
+                    <label for=allergies-1 class="survey-answer">yes</label>
+
+                    <!-- subquestion and answer set -->
+                    <table class=survey-matrix>
+                        <tr>
+                            <td><label class="survey-subquestion">allergy</label></td>
+                            <td><label class="survey-subquestion">reaction</label></td>
+                            <td><label class="survey-subquestion">severity</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyType_1 name=allergyType_1 id=allergyType_1 /></td>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyReaction_1 name=allergyReaction_1 id=allergyReaction_1 /></td>
+                            <td>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_1 name=allergySeverity_1 id=allergySeverity_1-0 value=0 />
+                                <label for=allergySeverity_1-0 class="survey-answer radio-first">mild</label>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_1 name=allergySeverity_1 id=allergySeverity_1-1 value=1 />
+                                <label for=allergySeverity_1-1 class="survey-answer">severe</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyType_2 name=allergyType_2 id=allergyType_2 /></td>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyReaction_2 name=allergyReaction_2 id=allergyReaction_2 /></td>
+                            <td>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_2 name=allergySeverity_2 id=allergySeverity_2-0 value=0 />
+                                <label for=allergySeverity_2-0 class="survey-answer radio-first">mild</label>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_2 name=allergySeverity_2 id=allergySeverity_2-1 value=1 />
+                                <label for=allergySeverity_2-1 class="survey-answer">severe</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyType_3 name=allergyType_3 id=allergyType_3 /></td>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyReaction_3 name=allergyReaction_3 id=allergyReaction_3 /></td>
+                            <td>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_3 name=allergySeverity_3 id=allergySeverity_3-0 value=0 />
+                                <label for=allergySeverity_3-0 class="survey-answer radio-first">mild</label>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_3 name=allergySeverity_3 id=allergySeverity_3-1 value=1 />
+                                <label for=allergySeverity_3-1 class="survey-answer">severe</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyType_4 name=allergyType_4 id=allergyType_4 /></td>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyReaction_4 name=allergyReaction_4 id=allergyReaction_4 /></td>
+                            <td>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_4 name=allergySeverity_4 id=allergySeverity_4-0 value=0 />
+                                <label for=allergySeverity_4-0 class="survey-answer radio-first">mild</label>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_4 name=allergySeverity_4 id=allergySeverity_4-1 value=1 />
+                                <label for=allergySeverity_4-1 class="survey-answer">severe</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyType_5 name=allergyType_5 id=allergyType_5 /></td>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=allergyReaction_5 name=allergyReaction_5 id=allergyReaction_5 /></td>
+                            <td>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_5 name=allergySeverity_5 id=allergySeverity_5-0 value=0 />
+                                <label for=allergySeverity_5-0 class="survey-answer radio-first">mild</label>
+                                <input type=radio class=modified_radio__ID data-custom=1 data-id=allergySeverity_5 name=allergySeverity_5 id=allergySeverity_5-1 value=1 />
+                                <label for=allergySeverity_5-1 class="survey-answer">severe</label>
+                            </td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you ever been diagnosed with a sleep condition in the past?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diagSleepDis name=diagSleepDis id=diagSleepDis-0 value=0 />
+                    <label for=diagSleepDis-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diagSleepDis name=diagSleepDis id=diagSleepDis-1 value=1 />
+                    <label for=diagSleepDis-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, specify the diagnosis</label>
+                    <input type=text placeholder='What diagnosis...' class=input_box_large__ID data-custom=1 data-id=diagSleepDis_specify name=diagSleepDis_specify id=diagSleepDis_specify  />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you used a CPAP or mandibular advancement device, or did you undergo CBT-I or take sleep medication?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=treatSleepDis name=treatSleepDis id=treatSleepDis-0 value=0 />
+                    <label for=treatSleepDis-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=treatSleepDis name=treatSleepDis id=treatSleepDis-1 value=1 />
+                    <label for=treatSleepDis-1 class="survey-answer">yes (exclude if sleep disorder has been treated)</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you ever been diagnosed with: (please tick each box that applies, and exclude if severe).</span>
+                    <table class=survey-matrix>
+                            <tr><td><input type=checkbox class=modified_checkbox__ID data-custom=1 data-id=diag_cardiacFailure name=diag_cardiacFailure id=diag_cardiacFailure value="cardiac failure" />
+                                    <label for="diag_cardiacFailure" class="survey-answer radio-first">cardiac failure</label></td>
+                                <td><input type=checkbox class=modified_checkbox__ID data-custom=1 data-id=diag_emphysema name=diag_emphysema id=diag_emphysema value="emphysema" />
+                                    <label for="diag_emphysema" class="survey-answer radio-first">emphysema</label></td></tr>
+                            <tr><td><input type=checkbox class=modified_checkbox__ID data-custom=1 data-id=diag_respiratoryFailure name=diag_respiratoryFailure id=diag_respiratoryFailure value="respiratory failure" />
+                                    <label for="diag_respiratoryFailure" class="survey-answer radio-first">respiratory failure</label></td>
+                                <td><input type=checkbox class=modified_checkbox__ID data-custom=1 data-id=diag_chronicBronchitis name=diag_chronicBronchitis id=diag_chronicBronchitis value="chronic bronchitis" />
+                                    <label for="diag_chronicBronchitis" class="survey-answer radio-first">chronic bronchitis</label></td></tr>
+                            <tr><td><input type=checkbox class=modified_checkbox__ID data-custom=1 data-id=diag_COPD name=diag_COPD id=diag_COPD value="COPD" />
+                                    <label for="diag_COPD" class="survey-answer radio-first">severe or very severe COPD (Gold 3/4)</label></td>
+                                <td><input type=checkbox class=modified_checkbox__ID data-custom=1 data-id=diag_chronicAsthma name=diag_chronicAsthma id=diag_chronicAsthma value="chronic asthma" />
+                                    <label for="diag_chronicAsthma" class="survey-answer radio-first">chronic asthma</label></td></tr>
+                        </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you previously had a stroke or head injury?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diag_brainInjury name=diag_brainInjury id=diag_brainInjury-0 value=0 />
+                    <label for=diag_brainInjury-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diag_brainInjury name=diag_brainInjury id=diag_brainInjury-1 value=1 />
+                    <label for=diag_brainInjury-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, please record details, and exclude if moderate/severe long-term effects.</label>
+                    <input type=text placeholder='Details...' class=input_box_large__ID data-custom=1 data-id=diag_brainInjury_specify name=diag_brainInjury_specify id=diag_brainInjury_specify />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Do you have any other physical health conditions for which you have recently received medical treatment?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diag_otherPhys name=diag_otherPhys id=diag_otherPhys-0 value=0 />
+                    <label for=diag_otherPhys-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diag_otherPhys name=diag_otherPhys id=diag_otherPhys-1 value=1 />
+                    <label for=diag_otherPhys-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, specify.</label>
+                    <input type=text placeholder='Details...' class=input_box_large__ID data-custom=1 data-id=diag_otherPhys_specify name=diag_otherPhys_specify id=diag_otherPhys_specify />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Have you been diagnosed with any psychiatric disorder such as anxiety, depression, mania or psychosis?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diag_psychiatric name=diag_psychiatric id=diag_psychiatric-0 value=0 />
+                    <label for=diag_psychiatric-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=diag_psychiatric name=diag_psychiatric id=diag_psychiatric-1 value=1 />
+                    <label for=diag_psychiatric-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, please record details, and exclude if uncontrolled.</label>
+                    <input type=text placeholder='Details...' class=input_box_large__ID data-custom=1 data-id=diag_psychiatric_specify name=diag_psychiatric_specify id=diag_psychiatric_specify />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Do you have any other medical conditions or have you been in hospital recently?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=medical_other name=medical_other id=medical_other-0 value=0 />
+                    <label for=medical_other-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=medical_other name=medical-other id=medical_other-1 value=1 />
+                    <label for=medical_other-1 class="survey-answer">yes</label>
+                    
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, please list and give details.</label>
+                    <input type=text placeholder='Details...' class=input_box_large__ID data-custom=1 data-id=medical_other_specify name=medical_other_specify id=medical_other_specify />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Are you taking any medications? This includes antidepressants and any medication to assist your sleep as well as over the counter medications and supplements such as vitamins and minerals.</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=medicationUse name=medicationUse id=medicationUse-0 value=0 />
+                    <label for=medicationUse-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=medicationUse name=medicationUse id=medicationUse-1 value=1 />
+                    <label for=medicationUse-1 class="survey-answer">yes</label>
+
+                    <!-- subquestion and answer set -->
+                    <label class="survey-subquestion">If yes, list medication type, frequency, and dose if known. Exclude if taking CNS active medications (i.e. antidepressants, anti-psychotics, opiates, antihistamines).</label>
+                    <table class=survey-matrix>
+                        <tr>
+                            <td><label class="survey-subquestion">Prescription drug</label></td>
+                            <td><label class="survey-subquestion">Frequency</label></td>
+                            <td><label class="survey-subquestion">Dose</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_1 name=medicationName_1 id=medicationName_1 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_1 name=medicationFreq_1 id=medicationFreq_1 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_1 name=medicationDose_1 id=medicationDose_1 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_2 name=medicationName_2 id=medicationName_2 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_2 name=medicationFreq_2 id=medicationFreq_2 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_2 name=medicationDose_2 id=medicationDose_2 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_3 name=medicationName_3 id=medicationName_3 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_3 name=medicationFreq_3 id=medicationFreq_3 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_3 name=medicationDose_3 id=medicationDose_3 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_4 name=medicationName_4 id=medicationName_4 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_4 name=medicationFreq_4 id=medicationFreq_4 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_4 name=medicationDose_4 id=medicationDose_4 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><label class="survey-subquestion">Over the counter drugs</label></td>
+                            <td><label class="survey-subquestion">Frequency</label></td>
+                            <td><label class="survey-subquestion">Dose</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_5 name=medicationName_5 id=medicationName_5 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_5 name=medicationFreq_5 id=medicationFreq_5 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_5 name=medicationDose_5 id=medicationDose_5 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_6 name=medicationName_6 id=medicationName_6 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_6 name=medicationFreq_6 id=medicationFreq_6 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_6 name=medicationDose_6 id=medicationDose_6 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_7 name=medicationName_7 id=medicationName_7 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_7 name=medicationFreq_7 id=medicationFreq_7 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_7 name=medicationDose_7 id=medicationDose_7 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><label class="survey-subquestion">Vitamins, mineral, supplements</label></td>
+                            <td><label class="survey-subquestion">Frequency</label></td>
+                            <td><label class="survey-subquestion">Dose</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_8 name=medicationName_8 id=medicationName_8 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_8 name=medicationFreq_8 id=medicationFreq_8 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_8 name=medicationDose_8 id=medicationDose_8 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_9 name=medicationName_9 id=medicationName_9 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_9 name=medicationFreq_9 id=medicationFreq_9 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_9 name=medicationDose_9 id=medicationDose_9 /><label class="survey-label">mg</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=medicationName_10 name=medicationName_10 id=medicationName_10 /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationFreq_10 name=medicationFreq_10 id=medicationFreq_10 /><label class="survey-label">time(s)/day</label></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=medicationDose_10 name=medicationDose_10 id=medicationDose_10 /><label class="survey-label">mg</label></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- Question set header -->
+                <tr><td class='header__ID'>
+                    <span class=survey-h1>Decision</span>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Is the participant eligible for the study?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=eligible name=eligible id=eligible-0 value=0 />
+                    <label for=eligible-0 class="survey-answer radio-first">no</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=eligible name=eligible id=eligible-1 value=1 />
+                    <label for=eligible-1 class="survey-answer">yes, send Participant Information Sheet, contact within 3 days to schedule screening visit.</label>
+                </td></tr>
+
+            </table><br>&nbsp;<a id=save2__ID class=save_and_back__ID >Save &amp; Back</a>
+        </form>
+
+    </td></tr></table>
+</section>
+<script>
+    
+    function F__ID(){
+        //----------------------------------
+        VmInclude:__COMPONENT__/grid/form.v3.js
+        VmInclude:__CURRENT_PATH__/task.form.js
+        _json=''
+        //----------------------------------
+        $('#D__ID').on('load',function(){
+            _init();
+            _field_process();
+            _task_fields=$vm.vm['__ID'].op.grid_to_form_parameters.task_fields;
+            _set_participant_field();
+            custom_field_process();
+        })
+        //----------------------------------
+        var custom_field_process=function(){
+            $('#tb__ID tbody *[data-custom=1]').each(function(){
+                var field=$(this).attr('data-id');
+                switch(field){
+                    case "Participant":
+                        $(this).find("input[name='"+field+"']").val(_records[I].Participant);
+                        $(this).find("input[name='"+field+"_uid']").val(_records[I].Participant_uid);
+                    break;
+                    //Radio buttons
+                    //case 'menstral_stop':
+                    //case 'hysterectomy':
+                    //case 'pregnancy':
+                    //case 'hrt':
+                    //case 'hrt_current':
+                    //case 'cycle_consistent':
+                    $('#tb__ID').find("input[name='"+field+"'][value='"+_records[I][field]+"']").prop('checked', true);
+                    $('#tb__ID').find("input[name='"+field+")_']").on('click',function(){
+                        _set_value(this.value,_records,I,field);
+                    })
+                    break;
+                    //Checkbox
+                    case 'Age':
+                    case 'Male':
+                    case 'Male':
+                    case 'CPAP_yes':
+                    case 'CPAP_no':
+                    //case 'OSA15':
+                    case 'HDEEG_yes':
+                    case 'HDEEG_no':
+                    case 'OSA14_yes':
+                    case 'OSA14_no':
+                    //case 'Female':
+                    case 'English_yes':
+                    case 'English_no':
+                    case 'Neuropsych_yes':
+                    case 'Neuropsych_no':
+                    case 'mental_yes':
+                    case 'mental_no':
+                    //case 'dementia':
+                    case 'Centralmeds_yes':
+                    case 'Centralmeds_no':
+                    case 'Shiftworker_yes':
+                    case 'Shiftworker_no':
+                    case 'Travel_yes':
+                    case 'Travel_no':
+                    //case 'Lowsemsa':
+                    if(_records[I][field]=="1" || _records[I][field]=="True" || _records[I][field]=="on" ) $(this).prop('checked', true);
+                    $(this).on('click', function(){
+                        if($(this).prop("checked") == true)   _set_value("1",_records,I,field);
+                        else                                  _set_value("0",_records,I,field);
+                    });
+                    break;
+                    //Text
+                    case 'Age_comment':
+                    case 'Male_comment':
+                    case 'CPAP_comment':
+                    case 'HDEEG_comment':
+                    case 'OSA14_comment':
+                    case 'Head_comment':
+                    //case 'Female_comment':
+                    case 'English_comment':
+                    case 'Neuropsych_comment':
+                    case 'mental_comment':
+                    case 'dementia_comment':
+                    case 'Centralmeds_comment':
+                    case 'Shiftworker_comment':
+                    case 'Travel_comment':
+                    case 'Lowsemsa_comment':
+                        $(this).val(_records[I][field]);
+                        $(this).on('change', function(){
+                            _set_value($(this).val(),_records,I,field);
+                        });
+                    break;
+                }
+            });
+        }
+        //----------------------------------
+        _before_submit=function(record,dbv){
+            return _set_status_and_participant(record,dbv);
+        }
+        //----------------------------------
+        _before_submit_form=function(){
+        }
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/grid/form.css
+    #tb__ID tr td:nth-child(2),
+    #tb__ID tr td:nth-child(3),
+    #tb__ID tr td:nth-child(4),
+    #tb__ID tr td:nth-child(5),
+    #tb__ID tr td:nth-child(6)
+    {
+        text-align: center;
+        padding: 5px;
+    }
+</style>

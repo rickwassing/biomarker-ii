@@ -1,0 +1,464 @@
+<link href="../../layout/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<!-- javascript links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../js/rt-javascript.js"></script>
+
+<section>
+    VmInclude:__COMPONENT__/toolbar/back_save.html
+
+    <table width=100% style="width:100%"><tr><td align="center">
+
+        <form id=F__ID>
+            <table id=tb__ID>
+
+                <!-- Survey header -->
+                <tr><td class='title__ID'>
+                    <span class="survey-title">Worry and Stress Questionnaire</span>
+                </td></tr>
+
+                <!-- Set participant -->
+                <tr id=tr_participant__ID style='display:none'><td data-id=Participant data-custom=1>
+                    <input name=Participant  id=Participant__ID  type=text class=sel__ID placeholder='select a partcipant...'/>
+                    <input name=Participant_uid id=Participant_uid__ID type=text readonly />
+                    <u style='cursor:pointer;float:right;' id=Participant_r__ID>Remove</u>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr><td class='question__ID'>
+                    <span class="survey-question">Directions:</span>
+                    <span class="survey-subquestion">
+                        A number of statements which people have used to describe themselves are given below.
+                        Read each statement and the select the appropriate answer to the right of the statement to indicate how you feel <i>right now</i>, that is, <i>at this moment</i>.
+                        There are no right or wrong answers. Do not spend too much time on any one statement but give the answer which seems to describe your present feeling best.
+                    </span>
+                    <table class=survey-matrix>
+                        <tr>
+                            <td class=survey-matrix-td-left style="width:56%;"></td>
+                            <td class=survey-matrix-td-center style="width:11%;">not at all</td>
+                            <td class=survey-matrix-td-center style="width:11%;">somewhat</td>
+                            <td class=survey-matrix-td-center style="width:11%;">moderately so</td>
+                            <td class=survey-matrix-td-center style="width:11%;">very much so</td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">1. I feel calm</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0001 name=STAI_0001 id=STAI_0001-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0001 name=STAI_0001 id=STAI_0001-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0001 name=STAI_0001 id=STAI_0001-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0001 name=STAI_0001 id=STAI_0001-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">2. I feel secure</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0002 name=STAI_0002 id=STAI_0002-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0002 name=STAI_0002 id=STAI_0002-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0002 name=STAI_0002 id=STAI_0002-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0002 name=STAI_0002 id=STAI_0002-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">3. I am tense</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0003 name=STAI_0003 id=STAI_0003-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0003 name=STAI_0003 id=STAI_0003-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0003 name=STAI_0003 id=STAI_0003-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0003 name=STAI_0003 id=STAI_0003-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">4. I feel strained</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0004 name=STAI_0004 id=STAI_0004-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0004 name=STAI_0004 id=STAI_0004-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0004 name=STAI_0004 id=STAI_0004-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0004 name=STAI_0004 id=STAI_0004-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">5. I feel at ease</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0005 name=STAI_0005 id=STAI_0005-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0005 name=STAI_0005 id=STAI_0005-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0005 name=STAI_0005 id=STAI_0005-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0005 name=STAI_0005 id=STAI_0005-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">6. I feel upset</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0006 name=STAI_0006 id=STAI_0006-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0006 name=STAI_0006 id=STAI_0006-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0006 name=STAI_0006 id=STAI_0006-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0006 name=STAI_0006 id=STAI_0006-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">7. I am presently worrying over possible misfortunes</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0007 name=STAI_0007 id=STAI_0007-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0007 name=STAI_0007 id=STAI_0007-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0007 name=STAI_0007 id=STAI_0007-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0007 name=STAI_0007 id=STAI_0007-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">8. I feel satisfied</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0008 name=STAI_0008 id=STAI_0008-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0008 name=STAI_0008 id=STAI_0008-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0008 name=STAI_0008 id=STAI_0008-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0008 name=STAI_0008 id=STAI_0008-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">9. I feel frightened</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0009 name=STAI_0009 id=STAI_0009-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0009 name=STAI_0009 id=STAI_0009-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0009 name=STAI_0009 id=STAI_0009-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0009 name=STAI_0009 id=STAI_0009-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">10. I feel comfortable</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0010 name=STAI_0010 id=STAI_0010-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0010 name=STAI_0010 id=STAI_0010-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0010 name=STAI_0010 id=STAI_0010-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0010 name=STAI_0010 id=STAI_0010-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">11. I feel self-confident</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0011 name=STAI_0011 id=STAI_0011-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0011 name=STAI_0011 id=STAI_0011-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0011 name=STAI_0011 id=STAI_0011-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0011 name=STAI_0011 id=STAI_0011-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">12. I feel nervous</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0012 name=STAI_0012 id=STAI_0012-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0012 name=STAI_0012 id=STAI_0012-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0012 name=STAI_0012 id=STAI_0012-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0012 name=STAI_0012 id=STAI_0012-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">13. I am jittery</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0013 name=STAI_0013 id=STAI_0013-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0013 name=STAI_0013 id=STAI_0013-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0013 name=STAI_0013 id=STAI_0013-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0013 name=STAI_0013 id=STAI_0013-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">14. I feel indecisive</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0014 name=STAI_0014 id=STAI_0014-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0014 name=STAI_0014 id=STAI_0014-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0014 name=STAI_0014 id=STAI_0014-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0014 name=STAI_0014 id=STAI_0014-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">15. I am relaxed</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0015 name=STAI_0015 id=STAI_0015-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0015 name=STAI_0015 id=STAI_0015-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0015 name=STAI_0015 id=STAI_0015-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0015 name=STAI_0015 id=STAI_0015-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">16. I feel content</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0016 name=STAI_0016 id=STAI_0016-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0016 name=STAI_0016 id=STAI_0016-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0016 name=STAI_0016 id=STAI_0016-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0016 name=STAI_0016 id=STAI_0016-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">17. I am worried</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0017 name=STAI_0017 id=STAI_0017-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0017 name=STAI_0017 id=STAI_0017-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0017 name=STAI_0017 id=STAI_0017-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0017 name=STAI_0017 id=STAI_0017-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">18. I feel confused</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0018 name=STAI_0018 id=STAI_0018-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0018 name=STAI_0018 id=STAI_0018-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0018 name=STAI_0018 id=STAI_0018-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0018 name=STAI_0018 id=STAI_0018-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">19. I feel steady</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0019 name=STAI_0019 id=STAI_0019-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0019 name=STAI_0019 id=STAI_0019-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0019 name=STAI_0019 id=STAI_0019-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0019 name=STAI_0019 id=STAI_0019-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">20. I feel pleasant</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0020 name=STAI_0020 id=STAI_0020-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0020 name=STAI_0020 id=STAI_0020-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0020 name=STAI_0020 id=STAI_0020-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0020 name=STAI_0020 id=STAI_0020-1 value=1 /></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr><td class='question__ID'>
+                    <span class="survey-question">Directions:</span>
+                    <span class="survey-subquestion">
+                        A number of statements which people have used to describe themselves are given below.
+                        Read each statement and the select the appropriate answer to the right of the statement to indicate how you <i>generally</i> feel.
+                        There are no right or wrong answers. Do not spend too much time on any one statement but give the answer which seems to describe how you generally feel.
+                    </span>
+                    <table class=survey-matrix>
+                        <tr>
+                            <td class=survey-matrix-td-left style="width:56%;"></td>
+                            <td class=survey-matrix-td-center style="width:11%;">almost never</td>
+                            <td class=survey-matrix-td-center style="width:11%;">sometimes</td>
+                            <td class=survey-matrix-td-center style="width:11%;">often</td>
+                            <td class=survey-matrix-td-center style="width:11%;">almost always</td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">21. I feel pleasant</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0021 name=STAI_0021 id=STAI_0021-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0021 name=STAI_0021 id=STAI_0021-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0021 name=STAI_0021 id=STAI_0021-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0021 name=STAI_0021 id=STAI_0021-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">22. I feel nervous and restless</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0022 name=STAI_0022 id=STAI_0022-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0022 name=STAI_0022 id=STAI_0022-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0022 name=STAI_0022 id=STAI_0022-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0022 name=STAI_0022 id=STAI_0022-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">23. I feel satisfied with myself</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0023 name=STAI_0023 id=STAI_0023-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0023 name=STAI_0023 id=STAI_0023-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0023 name=STAI_0023 id=STAI_0023-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0023 name=STAI_0023 id=STAI_0023-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">24. I wish I could be as happy as others seem to be</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0024 name=STAI_0024 id=STAI_0024-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0024 name=STAI_0024 id=STAI_0024-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0024 name=STAI_0024 id=STAI_0024-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0024 name=STAI_0024 id=STAI_0024-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">25. I feel like a failure</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0025 name=STAI_0025 id=STAI_0025-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0025 name=STAI_0025 id=STAI_0025-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0025 name=STAI_0025 id=STAI_0025-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0025 name=STAI_0025 id=STAI_0025-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">26. I feel rested</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0026 name=STAI_0026 id=STAI_0026-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0026 name=STAI_0026 id=STAI_0026-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0026 name=STAI_0026 id=STAI_0026-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0026 name=STAI_0026 id=STAI_0026-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">27. I am "calm, cool, and collected"</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0027 name=STAI_0027 id=STAI_0027-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0027 name=STAI_0027 id=STAI_0027-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0027 name=STAI_0027 id=STAI_0027-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0027 name=STAI_0027 id=STAI_0027-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">28. I feel that difficulties are piling up so that I cannot overcome them</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0028 name=STAI_0028 id=STAI_0028-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0028 name=STAI_0028 id=STAI_0028-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0028 name=STAI_0028 id=STAI_0028-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0028 name=STAI_0028 id=STAI_0028-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">29. I worry too much over something that really doesn't matter</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0029 name=STAI_0029 id=STAI_0029-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0029 name=STAI_0029 id=STAI_0029-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0029 name=STAI_0029 id=STAI_0029-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0029 name=STAI_0029 id=STAI_0029-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">30. I am happy</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0030 name=STAI_0030 id=STAI_0030-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0030 name=STAI_0030 id=STAI_0030-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0030 name=STAI_0030 id=STAI_0030-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0030 name=STAI_0030 id=STAI_0030-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">31. I have disturbing thoughts</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0031 name=STAI_0031 id=STAI_0031-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0031 name=STAI_0031 id=STAI_0031-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0031 name=STAI_0031 id=STAI_0031-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0031 name=STAI_0031 id=STAI_0031-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">32. I lack self-confidence</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0032 name=STAI_0032 id=STAI_0032-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0032 name=STAI_0032 id=STAI_0032-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0032 name=STAI_0032 id=STAI_0032-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0032 name=STAI_0032 id=STAI_0032-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">33. I feel secure</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0033 name=STAI_0033 id=STAI_0033-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0033 name=STAI_0033 id=STAI_0033-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0033 name=STAI_0033 id=STAI_0033-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0033 name=STAI_0033 id=STAI_0033-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">34. I make decisions easily</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0034 name=STAI_0034 id=STAI_0034-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0034 name=STAI_0034 id=STAI_0034-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0034 name=STAI_0034 id=STAI_0034-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0034 name=STAI_0034 id=STAI_0034-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">35. I feel inadequate</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0035 name=STAI_0035 id=STAI_0035-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0035 name=STAI_0035 id=STAI_0035-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0035 name=STAI_0035 id=STAI_0035-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0035 name=STAI_0035 id=STAI_0035-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">36. I am content</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0036 name=STAI_0036 id=STAI_0036-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0036 name=STAI_0036 id=STAI_0036-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0036 name=STAI_0036 id=STAI_0036-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0036 name=STAI_0036 id=STAI_0036-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">37. Some unimportant thought runs through my mind and bothers me</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0037 name=STAI_0037 id=STAI_0037-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0037 name=STAI_0037 id=STAI_0037-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0037 name=STAI_0037 id=STAI_0037-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0037 name=STAI_0037 id=STAI_0037-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">38. I take disappointments so keenly that I can't put them out of my mind</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0038 name=STAI_0038 id=STAI_0038-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0038 name=STAI_0038 id=STAI_0038-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0038 name=STAI_0038 id=STAI_0038-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0038 name=STAI_0038 id=STAI_0038-4 value=4 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">39. I am a steady person</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0039 name=STAI_0039 id=STAI_0039-4 value=4 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0039 name=STAI_0039 id=STAI_0039-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0039 name=STAI_0039 id=STAI_0039-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0039 name=STAI_0039 id=STAI_0039-1 value=1 /></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class=survey-matrix-td-left><span class="survey-question">40. I get in a state of tension or turmoil as I think over my recent concerns and interests</span></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0040 name=STAI_0040 id=STAI_0040-1 value=1 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0040 name=STAI_0040 id=STAI_0040-2 value=2 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0040 name=STAI_0040 id=STAI_0040-3 value=3 /></td>
+                            <td class=survey-matrix-td-center><input type=radio class=modified_radio__ID data-custom=1 data-id=STAI_0040 name=STAI_0040 id=STAI_0040-4 value=4 /></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+            </table><br>&nbsp;<a id=save2__ID class=save_and_back__ID >Save &amp; Back</a>
+        </form>
+
+    </td></tr></table>
+</section>
+<script>
+
+
+    function F__ID(){
+        //----------------------------------
+        VmInclude:__COMPONENT__/grid/form.v3.js
+        VmInclude:__CURRENT_PATH__/task.form.js
+        _json=''
+        //----------------------------------
+        $('#D__ID').on('load',function(){
+            _init();
+            _field_process();
+            _task_fields=$vm.vm['__ID'].op.grid_to_form_parameters.task_fields;
+            _set_participant_field();
+            custom_field_process();
+        })
+        //----------------------------------
+        var custom_field_process=function(){
+            $('#tb__ID tbody *[data-custom=1]').each(function(){
+                var field=$(this).attr('data-id');
+                switch(field){
+                    case "Participant":
+                        $(this).find("input[name='"+field+"']").val(_records[I].Participant);
+                        $(this).find("input[name='"+field+"_uid']").val(_records[I].Participant_uid);
+                    break;
+                    //Radio buttons
+                    //case 'menstral_stop':
+                    //case 'hysterectomy':
+                    //case 'pregnancy':
+                    //case 'hrt':
+                    //case 'hrt_current':
+                    //case 'cycle_consistent':
+                    $('#tb__ID').find("input[name='"+field+"'][value='"+_records[I][field]+"']").prop('checked', true);
+                    $('#tb__ID').find("input[name='"+field+")_']").on('click',function(){
+                        _set_value(this.value,_records,I,field);
+                    })
+                    break;
+                    //Checkbox
+                    case 'Age':
+                    case 'Male':
+                    case 'Male':
+                    case 'CPAP_yes':
+                    case 'CPAP_no':
+                    //case 'OSA15':
+                    case 'HDEEG_yes':
+                    case 'HDEEG_no':
+                    case 'OSA14_yes':
+                    case 'OSA14_no':
+                    //case 'Female':
+                    case 'English_yes':
+                    case 'English_no':
+                    case 'Neuropsych_yes':
+                    case 'Neuropsych_no':
+                    case 'mental_yes':
+                    case 'mental_no':
+                    //case 'dementia':
+                    case 'Centralmeds_yes':
+                    case 'Centralmeds_no':
+                    case 'Shiftworker_yes':
+                    case 'Shiftworker_no':
+                    case 'Travel_yes':
+                    case 'Travel_no':
+                    //case 'Lowsemsa':
+                    if(_records[I][field]=="1" || _records[I][field]=="True" || _records[I][field]=="on" ) $(this).prop('checked', true);
+                    $(this).on('click', function(){
+                        if($(this).prop("checked") == true)   _set_value("1",_records,I,field);
+                        else                                  _set_value("0",_records,I,field);
+                    });
+                    break;
+                    //Text
+                    case 'Age_comment':
+                    case 'Male_comment':
+                    case 'CPAP_comment':
+                    case 'HDEEG_comment':
+                    case 'OSA14_comment':
+                    case 'Head_comment':
+                    //case 'Female_comment':
+                    case 'English_comment':
+                    case 'Neuropsych_comment':
+                    case 'mental_comment':
+                    case 'dementia_comment':
+                    case 'Centralmeds_comment':
+                    case 'Shiftworker_comment':
+                    case 'Travel_comment':
+                    case 'Lowsemsa_comment':
+                        $(this).val(_records[I][field]);
+                        $(this).on('change', function(){
+                            _set_value($(this).val(),_records,I,field);
+                        });
+                    break;
+                }
+            });
+        }
+        //----------------------------------
+        _before_submit=function(record,dbv){
+            return _set_status_and_participant(record,dbv);
+        }
+        //----------------------------------
+        _before_submit_form=function(){
+        }
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/grid/form.css
+    #tb__ID tr td:nth-child(2),
+    #tb__ID tr td:nth-child(3),
+    #tb__ID tr td:nth-child(4),
+    #tb__ID tr td:nth-child(5),
+    #tb__ID tr td:nth-child(6)
+    {
+        text-align: center;
+        padding: 5px;
+    }
+</style>

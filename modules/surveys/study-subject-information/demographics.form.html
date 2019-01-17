@@ -1,0 +1,351 @@
+<link href="../../layout/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<!-- javascript links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../js/rt-javascript.js"></script>
+
+<section>
+    VmInclude:__COMPONENT__/toolbar/back_save.html
+
+    <table width=100% style="width:100%"><tr><td align="center">
+
+        <form id=F__ID>
+            <table id=tb__ID>
+
+                <!-- Survey header -->
+                <tr><td class='title__ID'>
+                    <span class="survey-title">Demographics</span>
+                </td></tr>
+
+                <!-- Set participant -->
+                <tr id=tr_participant__ID style='display:none'><td data-id=Participant data-custom=1>
+                    <input name=Participant  id=Participant__ID  type=text class=sel__ID placeholder='select a partcipant...'/>
+                    <input name=Participant_uid id=Participant_uid__ID type=text readonly />
+                    <u style='cursor:pointer;float:right;' id=Participant_r__ID>Remove</u>
+                </td></tr>
+
+                <!-- Question set header -->
+                <tr><td class='header__ID'>
+                    <span class=survey-h1>Personal Information</span>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">What is your name?</span>    
+                    <table class=survey-matrix>
+                        <tr>
+                            <td><label class="survey-subquestion">First name</label></td>
+                            <td><label class="survey-subquestion">Initials</label></td>
+                            <td><label class="survey-subquestion">Last name</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=DEMO_firstName name=DEMO_firstName id=DEMO_firstName /></td>
+                            <td><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=DEMO_initials name=DEMO_initials id=DEMO_initials /></td>
+                            <td><input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=DEMO_lastName name=DEMO_lastName id=DEMO_lastName /></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">What is your date of birth?</span>
+                    <table class=survey-matrix>
+                        <tr>
+                            <td class=survey-matrix-td-left><label class="survey-label">Day</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-label">Month</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-label">Year</label></td>
+                        </tr>
+                        <tr>
+                            <td class=survey-matrix-td-left><select class=modified_select__ID data-custom=1 data-id=DEMO_dateOfBirth_day name=DEMO_dateOfBirth_day id=DEMO_dateOfBirth_day></select></td>
+                            <td class=survey-matrix-td-left><select class=modified_select__ID data-custom=1 data-id=DEMO_dateOfBirth_month name=DEMO_dateOfBirth_month id=DEMO_dateOfBirth_month></select></td>
+                            <td class=survey-matrix-td-left><select class=modified_select__ID data-custom=1 data-id=DEMO_dateOfBirth_year name=DEMO_dateOfBirth_year id=DEMO_dateOfBirth_year></select></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Gender</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=DEMO_gender name=DEMO_gender id=DEMO_gender-male value=m />
+                    <label for=DEMO_gender-male class="survey-answer radio-first">male</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=DEMO_gender name=DEMO_gender id=DEMO_gender-female value=f />
+                    <label for=DEMO_gender-female class="survey-answer">female</label><br />
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=DEMO_gender name=DEMO_gender id=DEMO_gender-other value=x />
+                    <label for=DEMO_gender-other class="survey-answer">other, please specify</label>
+
+                    <!-- subquestion and answer set -->
+                    <input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=DEMO_gender_specify  name=DEMO_gender_specify  id=DEMO_gender_specify  />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Phone number</span>
+                    <input type=text placeholder='home' maxlength=10 class=input_box_medium__ID data-custom=1 data-id=DEMO_phoneHome name=DEMO_phoneHome id=DEMO_phoneHome />
+                    <input type=text placeholder='mobile' maxlength=10 class=input_box_medium__ID data-custom=1 data-id=DEMO_phoneMobile name=DEMO_phoneMobile id=DEMO_phoneMobile />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Email</span>
+                    <input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=DEMO_email name=DEMO_email id=DEMO_email />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Address</span>
+                    <table class=survey-matrix>
+                        <tr>
+                            <td class=survey-matrix-td-left><label class="survey-label">Unit/Number</label></td>
+                            <td class=survey-matrix-td-left colspan=2><label class="survey-label">Street</label></td>
+                        </tr>
+                        <tr>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' class=input_box_small__ID data-custom=1 data-id=DEMO_address_streetnumber name=DEMO_address_streetnumber id=DEMO_address_streetnumber /></td>
+                            <td class=survey-matrix-td-left colspan=2><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=DEMO_address_streetname name=DEMO_address_streetname id=DEMO_address_streetname /></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class=survey-matrix-td-left><label class="survey-label">Suburb/town</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-label">Postcode</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-label">State</label></td>
+                        </tr>
+                        <tr>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=DEMO_address_town name=DEMO_address_town id=DEMO_address_town /></td>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' maxlength=4 class=input_box_small__ID data-custom=1 data-id=DEMO_address_postcode name=DEMO_address_postcode id=DEMO_address_postcode /></td>
+                            <td class=survey-matrix-td-left><select class=modified_select__ID data-custom=1 data-id=DEMO_address_state name=DEMO_address_state id=DEMO_address_state>
+                                    <option value=NSW>NSW</option>
+                                    <option value=QLD>QLD</option>
+                                    <option value=SA>SA</option>
+                                    <option value=TAS>TAS</option>
+                                    <option value=VIC>VIC</option>
+                                    <option value=WA>WA</option>
+                                    <option value=ACT>ACT</option>
+                                    <option value=NT>NT</option>
+                                </select></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Weight</span>
+                    <input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=ANTHRO_weight name=ANTHRO_weight id=ANTHRO_weight />
+                    <label class="survey-label">kg</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Height</span>
+                    <input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=ANTHRO_height name=ANTHRO_height id=ANTHRO_height />
+                    <label class="survey-label">cm</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Circumference</span>
+                    <table class=survey-matrix>
+                        <tr>
+                            <td class=survey-matrix-td-left><label class="survey-subquestion">Waist</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-subquestion">Hip</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-subquestion">Neck</label></td>
+                            <td class=survey-matrix-td-left><label class="survey-subquestion">Head</label></td>
+                        </tr>
+                        <tr>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=ANTHRO_waist name=ANTHRO_waist id=ANTHRO_waist /><label class="survey-label">cm</label></td>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=ANTHRO_hip name=ANTHRO_hip id=ANTHRO_hip /><label class="survey-label">cm</label></td>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=ANTHRO_neck name=ANTHRO_neck id=ANTHRO_neck /><label class="survey-label">cm</label></td>
+                            <td class=survey-matrix-td-left><input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=ANTHRO_head name=ANTHRO_head id=ANTHRO_head /><label class="survey-label">cm</label></td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">How many years of education have you received?</span>
+                    <input type=text placeholder='' maxlength=2 class=input_box_small__ID data-custom=1 data-id=EDU_years name=EDU_years id=EDU_years />
+                    <label class="survey-label">years</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">What is the highest educational qualification you have attained (HSC, University, TAFE etc.)?</span>
+                    <input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=EDU_qualification name=EDU_qualification id=EDU_qualification />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">What is your current primary occupation?</span>
+                    <input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=EDU_occupation name=EDU_occupation id=EDU_occupation />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr><td class='question__ID'>
+                    <span class="survey-question">How would you rate your computer skills?</span>
+                    <table class="survey-matrix" style="width:100%;">
+                        <tr>
+                            <td class="survey-matrix-td-center" style="width:20%;"><label for=EDU_computer-1>poor</label></td>
+                            <td class="survey-matrix-td-center" style="width:20%;"><label for=EDU_computer-2>below average</label></td>
+                            <td class="survey-matrix-td-center" style="width:20%;"><label for=EDU_computer-3>average</label></td>
+                            <td class="survey-matrix-td-center" style="width:20%;"><label for=EDU_computer-4>good</label></td>
+                            <td class="survey-matrix-td-center" style="width:20%;"><label for=EDU_computer-5>excellent</label></td>
+                        </tr>
+                        <tr class=survey-row>
+                            <td class="survey-matrix-td-center"><input type=radio class=modified_radio__ID data-custom=1 data-id=EDU_computerSkill name=EDU_computerSkill id=EDU_computerSkill-1 value=1 /></td>
+                            <td class="survey-matrix-td-center"><input type=radio class=modified_radio__ID data-custom=1 data-id=EDU_computerSkill name=EDU_computerSkill id=EDU_computerSkill-2 value=2 /></td>
+                            <td class="survey-matrix-td-center"><input type=radio class=modified_radio__ID data-custom=1 data-id=EDU_computerSkill name=EDU_computerSkill id=EDU_computerSkill-3 value=3 /></td>
+                            <td class="survey-matrix-td-center"><input type=radio class=modified_radio__ID data-custom=1 data-id=EDU_computerSkill name=EDU_computerSkill id=EDU_computerSkill-4 value=4 /></td>
+                            <td class="survey-matrix-td-center"><input type=radio class=modified_radio__ID data-custom=1 data-id=EDU_computerSkill name=EDU_computerSkill id=EDU_computerSkill-5 value=5 /></td>
+                        </tr>
+                    </table>                 
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">How many hours per week do you use the computer?</span>
+                    <input type=text placeholder='' maxlength=3 class=input_box_small__ID data-custom=1 data-id=EDU_computerTime name=EDU_computerTime id=EDU_computerTime />
+                    <label class="survey-label">hours</label>
+                </td></tr>
+
+            </table><br>&nbsp;<a id=save2__ID class=save_and_back__ID >Save &amp; Back</a>
+        </form>
+
+    </td></tr></table>
+</section>
+<script>
+    
+    
+    document.getElementById("DEMO_initials").addEventListener("blur", parseInitials, false);
+    document.getElementById("DEMO_firstName").addEventListener("blur", () => { parseName("DEMO_firstName"); }, false);
+    document.getElementById("DEMO_lastName").addEventListener("blur", () => { parseName("DEMO_lastName"); }, false);
+    document.getElementById("DEMO_phoneHome").addEventListener("blur", () => { parseIntegers("DEMO_phoneHome"); }, false);
+    document.getElementById("DEMO_phoneMobile").addEventListener("blur", () => { parseIntegers("DEMO_phoneMobile"); }, false);
+    document.getElementById("DEMO_address_postcode").addEventListener("blur", () => { parseIntegers("DEMO_address_postcode"); }, false);
+    document.getElementById("ANTHRO_height").addEventListener("blur", () => { parseIntegers("ANTHRO_height"); }, false);
+    document.getElementById("ANTHRO_weight").addEventListener("blur", () => { parseIntegers("ANTHRO_weight"); }, false);
+    document.getElementById("EDU_computerTime").addEventListener("blur", () => { parseIntegers("EDU_computerTime"); }, false);
+
+    $(document).ready(function() {
+        for (day=1;day<=31;day++) {
+            $("#DEMO_dateOfBirth_day").append("<option value='" + day + "'>" + day + "</option>")
+        }
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+        for (m=0;m<months.length;m++) {
+            $("#DEMO_dateOfBirth_month").append("<option value='" + months[m] + "'>" + months[m] + "</option>")
+        }
+        for (year=2010;year>=1950;year--) {
+            $("#DEMO_dateOfBirth_year").append("<option value='" + year + "'>" + year + "</option>")
+        }
+    });
+
+    function F__ID(){
+        //----------------------------------
+        VmInclude:__COMPONENT__/grid/form.v3.js
+        VmInclude:__CURRENT_PATH__/task.form.js
+        _json=''
+        //----------------------------------
+        $('#D__ID').on('load',function(){
+            _init();
+            _field_process();
+            _task_fields=$vm.vm['__ID'].op.grid_to_form_parameters.task_fields;
+            _set_participant_field();
+            custom_field_process();
+        })
+        //----------------------------------
+        var custom_field_process=function(){
+            $('#tb__ID tbody *[data-custom=1]').each(function(){
+                var field=$(this).attr('data-id');
+                switch(field){
+                    case "Participant":
+                        $(this).find("input[name='"+field+"']").val(_records[I].Participant);
+                        $(this).find("input[name='"+field+"_uid']").val(_records[I].Participant_uid);
+                    break;
+                    //Radio buttons
+                    //case 'menstral_stop':
+                    //case 'hysterectomy':
+                    //case 'pregnancy':
+                    //case 'hrt':
+                    //case 'hrt_current':
+                    //case 'cycle_consistent':
+                    $('#tb__ID').find("input[name='"+field+"'][value='"+_records[I][field]+"']").prop('checked', true);
+                    $('#tb__ID').find("input[name='"+field+")_']").on('click',function(){
+                        _set_value(this.value,_records,I,field);
+                    })
+                    break;
+                    //Checkbox
+                    case 'Age':
+                    case 'Male':
+                    case 'Male':
+                    case 'CPAP_yes':
+                    case 'CPAP_no':
+                    //case 'OSA15':
+                    case 'HDEEG_yes':
+                    case 'HDEEG_no':
+                    case 'OSA14_yes':
+                    case 'OSA14_no':
+                    //case 'Female':
+                    case 'English_yes':
+                    case 'English_no':
+                    case 'Neuropsych_yes':
+                    case 'Neuropsych_no':
+                    case 'mental_yes':
+                    case 'mental_no':
+                    //case 'dementia':
+                    case 'Centralmeds_yes':
+                    case 'Centralmeds_no':
+                    case 'Shiftworker_yes':
+                    case 'Shiftworker_no':
+                    case 'Travel_yes':
+                    case 'Travel_no':
+                    //case 'Lowsemsa':
+                    if(_records[I][field]=="1" || _records[I][field]=="True" || _records[I][field]=="on" ) $(this).prop('checked', true);
+                    $(this).on('click', function(){
+                        if($(this).prop("checked") == true)   _set_value("1",_records,I,field);
+                        else                                  _set_value("0",_records,I,field);
+                    });
+                    break;
+                    //Text
+                    case 'Age_comment':
+                    case 'Male_comment':
+                    case 'CPAP_comment':
+                    case 'HDEEG_comment':
+                    case 'OSA14_comment':
+                    case 'Head_comment':
+                    //case 'Female_comment':
+                    case 'English_comment':
+                    case 'Neuropsych_comment':
+                    case 'mental_comment':
+                    case 'dementia_comment':
+                    case 'Centralmeds_comment':
+                    case 'Shiftworker_comment':
+                    case 'Travel_comment':
+                    case 'Lowsemsa_comment':
+                        $(this).val(_records[I][field]);
+                        $(this).on('change', function(){
+                            _set_value($(this).val(),_records,I,field);
+                        });
+                    break;
+                }
+            });
+        }
+        //----------------------------------
+        _before_submit=function(record,dbv){
+            return _set_status_and_participant(record,dbv);
+        }
+        //----------------------------------
+        _before_submit_form=function(){
+        }
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/grid/form.css
+    #tb__ID tr td:nth-child(2),
+    #tb__ID tr td:nth-child(3),
+    #tb__ID tr td:nth-child(4),
+    #tb__ID tr td:nth-child(5),
+    #tb__ID tr td:nth-child(6)
+    {
+        text-align: center;
+        padding: 5px;
+    }
+</style>

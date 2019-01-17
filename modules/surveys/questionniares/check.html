@@ -1,0 +1,51 @@
+<link href="../../layout/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<!-- javascript links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script src="../../js/rt-javascript.js"></script>-->
+
+<!-- Time Pickers -->
+<link rel="stylesheet" href="https://widgixeu-library.s3.amazonaws.com/library/90007547/pickers.css">
+<script type="text/javascript" src="../../js/pickers.js"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<section>
+    <span class="survey-question">1. During the past month, when have you usually gone to bed at night?</span>
+    <label class="survey-label" id="PQSI_0001_prelabel">USUAL BED TIME</label>
+    <input type=text placeholder='22:30' maxlength=5 class=input_box_small__ID data-custom=1 data-id=PSQI_0001 name=PSQI_0001 id=PSQI_0001 />
+    <label class="survey-label" id="PQSI_0001_postlabel">(HH:MM)</label>
+
+    <script>
+        var picker = [];
+        picker[0] = {      // the index of this picker starting at zero
+            initValue : 22,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 23,  // the maximum value
+            step      : 1,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : ":",  // the label that is shown after the picker
+            delimiter : ":"   // the delimiter between pickers that is stored in data
+        }
+        picker[1] = {      // the index of this picker starting at zero
+            initValue : 30,   // the initial value
+            minValue  : 0,   // the minimal value
+            maxValue  : 55,  // the maximum value
+            step      : 5,   // increase or decrease step size
+            nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+            label     : "",  // the label that is shown after the picker
+            delimiter : ""   // the delimiter between pickers that is stored in data
+        }
+
+        // Leave the rest alone
+        var field_id   = "PSQI_0001";
+        var pre_label  = document.getElementById("PQSI_0001_prelabel").innerHTML;
+        var post_label = document.getElementById("PQSI_0001_postlabel").innerHTML;
+        var P = { N : picker.length, pre : pre_label, post : post_label };
+        inputs = [];
+        for (i = 0; i < picker.length; i++) { inputs[i] = picker[i]; }
+        P.inputs = inputs;
+        Pickers(field_id,P);
+    </script>
+
+</section>

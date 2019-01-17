@@ -1,0 +1,427 @@
+<!-- javascript links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../../js/rt-javascript.js"></script>
+
+<!-- Time Pickers -->
+<script type="text/javascript" src="../../js/pickers.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- stylesheet links -->
+<link href="../../layout/stylesheet.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../layout/pickers.css">
+
+<section>
+    VmInclude:__COMPONENT__/toolbar/back_save.html
+
+    <table width=100% style="width:100%"><tr><td align="center">
+
+        <form id=F__ID>
+            <table id=tb__ID>
+
+                <!-- Survey header -->
+                <tr><td class='title__ID'>
+                    <span class="survey-title">Polysomnography Evening Diary</span>
+                </td></tr>
+
+                <!-- Set participant -->
+                <tr id=tr_participant__ID style='display:none'><td data-id=Participant data-custom=1>
+                    <input name=Participant  id=Participant__ID  type=text class=sel__ID placeholder='select a partcipant...'/>
+                    <input name=Participant_uid id=Participant_uid__ID type=text readonly />
+                    <u style='cursor:pointer;float:right;' id=Participant_r__ID>Remove</u>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Has today been unusual in any respect?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0001 name=PSGE_0001 id=PSGE_0001-0 value=0 />
+                    <label for=PSGE_0001-0 class="survey-answer">No</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0001 name=PSGE_0001 id=PSGE_0001-1 value=1 />
+                    <label for=PSGE_0001-1 class="survey-answer">Yes, describe</label>
+
+                    <!-- subquestion and answer set -->
+                    <input type=text placeholder='' class=input_box_large__ID data-custom=1 data-id=PSGE_0001_specify  name=PSGE_0001_specify  id=PSGE_0001_specify  />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">How much sleep did you have last night?</span>
+                    <label class="survey-label" id="PSGE_0002_prelabel"></label>
+                    <input type=text maxlength=5 class=input_box_small__ID data-custom=1 data-id=PSGE_0002 name=PSGE_0002 id=PSGE_0002 />
+                    <label class="survey-label" id="PSGE_0002_postlabel">(HH:MM)</label>
+                </td></tr>
+                <script>
+                    var field_id   = "PSGE_0002";
+                    var picker = [];
+                    picker[0] = {      // the index of this picker starting at zero
+                        initValue : 7,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 23,  // the maximum value
+                        step      : 1,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : ":",  // the label that is shown after the picker
+                        delimiter : ":"   // the delimiter between pickers that is stored in data
+                    }
+                    picker[1] = {      // the index of this picker starting at zero
+                        initValue : 30,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 55,  // the maximum value
+                        step      : 5,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : "",  // the label that is shown after the picker
+                        delimiter : ""   // the delimiter between pickers that is stored in data
+                    }
+                    // Leave the rest alone
+                    var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+                    for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+                    Pickers(field_id,P);
+                </script>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Was this amount of sleep enough?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0003 name=PSGE_0003 id=PSGE_0003-0 value=0 />
+                    <label for=PSGE_0003-0 class="survey-answer radio-first">No</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0003 name=PSGE_0003 id=PSGE_0003-1 value=1 />
+                    <label for=PSGE_0003-1 class="survey-answer">Yes</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Did you nap or doze today?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0004 name=PSGE_0004 id=PSGE_0004-0 value=0 />
+                    <label for=PSGE_0004-0 class="survey-answer radio-first">No</label>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0004 name=PSGE_0004 id=PSGE_0004-1 value=1 />
+                    <label for=PSGE_0004-1 class="survey-answer">Yes</label>
+
+                    <!-- subquestion and answer set -->
+                    <span class="survey-subquestion">At what time did you nap?</span>
+                    <label class="survey-label" id="PSGE_0004a_prelabel"></label>
+                    <input type=text maxlength=5 class=input_box_small__ID data-custom=1 data-id=PSGE_0004a name=PSGE_0004a id=PSGE_0004a />
+                    <label class="survey-label" id="PSGE_0004a_postlabel">(HH:MM)</label>
+
+                    <!-- subquestion and answer set -->
+                    <span class="survey-subquestion">For how long did you nap?</span>
+                    <label class="survey-label" id="PSGE_0004b_prelabel"></label>
+                    <input type=text maxlength=5 class=input_box_small__ID data-custom=1 data-id=PSGE_0004b name=PSGE_0004b id=PSGE_0004b />
+                    <label class="survey-label" id="PSGE_0004b_postlabel">(HH:MM)</label>
+                </td></tr>
+                <script>
+                    var field_id   = "PSGE_0004a";
+                    var picker = [];
+                    picker[0] = {      // the index of this picker starting at zero
+                        initValue : 15,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 23,  // the maximum value
+                        step      : 1,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : ":",  // the label that is shown after the picker
+                        delimiter : ":"   // the delimiter between pickers that is stored in data
+                    }
+                    picker[1] = {      // the index of this picker starting at zero
+                        initValue : 30,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 55,  // the maximum value
+                        step      : 5,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : "",  // the label that is shown after the picker
+                        delimiter : ""   // the delimiter between pickers that is stored in data
+                    }
+                    // Leave the rest alone
+                    var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+                    for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+                    Pickers(field_id,P);
+
+                    var field_id   = "PSGE_0004b";
+                    var picker = [];
+                    picker[0] = {      // the index of this picker starting at zero
+                        initValue : 1,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 23,  // the maximum value
+                        step      : 1,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : ":",  // the label that is shown after the picker
+                        delimiter : ":"   // the delimiter between pickers that is stored in data
+                    }
+                    picker[1] = {      // the index of this picker starting at zero
+                        initValue : 30,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 55,  // the maximum value
+                        step      : 5,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : "",  // the label that is shown after the picker
+                        delimiter : ""   // the delimiter between pickers that is stored in data
+                    }
+                    // Leave the rest alone
+                    var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+                    for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+                    Pickers(field_id,P);
+                </script>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">At what time did you last eat a meal?</span>
+                    <label class="survey-label" id="PSGE_0005a_prelabel"></label>
+                    <input type=text maxlength=5 class=input_box_small__ID data-custom=1 data-id=PSGE_0005a name=PSGE_0005a id=PSGE_0005a />
+                    <label class="survey-label" id="PSGE_0005a_postlabel">(HH:MM)</label>
+                </td></tr>
+                <script>
+                    var field_id   = "PSGE_0005a";
+                    var picker = [];
+                    picker[0] = {      // the index of this picker starting at zero
+                        initValue : 18,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 23,  // the maximum value
+                        step      : 1,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : ":",  // the label that is shown after the picker
+                        delimiter : ":"   // the delimiter between pickers that is stored in data
+                    }
+                    picker[1] = {      // the index of this picker starting at zero
+                        initValue : 30,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 55,  // the maximum value
+                        step      : 5,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : "",  // the label that is shown after the picker
+                        delimiter : ""   // the delimiter between pickers that is stored in data
+                    }
+                    // Leave the rest alone
+                    var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+                    for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+                    Pickers(field_id,P);
+                </script>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">At what time did you last eat a snack?</span>
+                    <label class="survey-label" id="PSGE_0005b_prelabel"></label>
+                    <input type=text maxlength=5 class=input_box_small__ID data-custom=1 data-id=PSGE_0005b name=PSGE_0005b id=PSGE_0005b />
+                    <label class="survey-label" id="PSGE_0005b_postlabel">(HH:MM)</label>
+                </td></tr>
+                <script>
+                    var field_id   = "PSGE_0005b";
+                    var picker = [];
+                    picker[0] = {      // the index of this picker starting at zero
+                        initValue : 20,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 23,  // the maximum value
+                        step      : 1,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : ":",  // the label that is shown after the picker
+                        delimiter : ":"   // the delimiter between pickers that is stored in data
+                    }
+                    picker[1] = {      // the index of this picker starting at zero
+                        initValue : 30,   // the initial value
+                        minValue  : 0,   // the minimal value
+                        maxValue  : 55,  // the maximum value
+                        step      : 5,   // increase or decrease step size
+                        nChar     : 2,   // add leading-zeros to nChar's, e.g. 07:00
+                        label     : "",  // the label that is shown after the picker
+                        delimiter : ""   // the delimiter between pickers that is stored in data
+                    }
+                    // Leave the rest alone
+                    var P = { N : picker.length, pre : document.getElementById(field_id + "_prelabel").innerHTML, post : document.getElementById(field_id + "_postlabel").innerHTML, inputs : [] };
+                    for (i = 0; i < picker.length; i++) { P.inputs[i] = picker[i]; }
+                    Pickers(field_id,P);
+                </script>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Did you consume any alcohol in the last 24 hours?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0006 name=PSGE_0006 id=PSGE_0006-0 value=0 />
+                    <label for=PSGE_0006-0 class="survey-answer">No</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0006 name=PSGE_0006 id=PSGE_0006-1 value=1 />
+                    <label for=PSGE_0006-1 class="survey-answer">Yes, please indicate how much alcohol you have consumed?</label>
+
+                    <!-- subquestion and answer set -->
+                    <input type=text maxlength=2 placeholder='' class=input_box_small__ID data-custom=1 data-id=PSGE_0006_specify name=PSGE_0006_specify id=PSGE_0006_specify  />
+                    <span class="survey-label">standard units</span>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">How many cups or glasses of these drinks have you consumed in the last 12 hours?</span>
+                    <table class=survey-matrix style="width:100%;">
+                        <tr>
+                            <td class=survey-matrix-td-left style="width:33%;">
+                                <span class="survey-answer">Tea</span>
+                                <input type=text maxlength=4 placeholder='' class=input_box_small__ID data-custom=1 data-id=PSGE_0007a name=PSGE_0007a id=PSGE_0007a />
+                                <span class="survey-label">ml</span>
+                            </td>
+                            <td class=survey-matrix-td-left style="width:33%;">
+                                <span class="survey-answer">Coffee</span>
+                                <input type=text maxlength=4 placeholder='' class=input_box_small__ID data-custom=1 data-id=PSGE_0007b name=PSGE_0007b id=PSGE_0007b />
+                                <span class="survey-label">ml</span>
+                            </td>
+                            <td class=survey-matrix-td-left style="width:33%;">
+                                <span class="survey-answer">Cola</span>
+                                <input type=text maxlength=4 placeholder='' class=input_box_small__ID data-custom=1 data-id=PSGE_0007c name=PSGE_0007c id=PSGE_0007c />
+                                <span class="survey-label">ml</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Do you have any physical complaints which may affect your sleep tonight?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0008 name=PSGE_0008 id=PSGE_0008-0 value=0 />
+                    <label for=PSGE_0008-0 class="survey-answer">No</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0008 name=PSGE_0008 id=PSGE_0008-1 value=1 />
+                    <label for=PSGE_0008-1 class="survey-answer">Yes, describe</label>
+
+                    <!-- subquestion and answer set -->
+                    <input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=PSGE_0008_specify  name=PSGE_0008_specify  id=PSGE_0008_specify  />
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">What positions do you usually sleep in at home?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0009 name=PSGE_0009 id=PSGE_0009-back value=back />
+                    <label for=PSGE_0009-back class="survey-answer">Back</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0009 name=PSGE_0009 id=PSGE_0009-belly value=belly />
+                    <label for=PSGE_0009-belly class="survey-answer">Belly</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0009 name=PSGE_0009 id=PSGE_0009-left value=left />
+                    <label for=PSGE_0009-left class="survey-answer">Left</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0009 name=PSGE_0009 id=PSGE_0009-right value=right />
+                    <label for=PSGE_0009-right class="survey-answer">Right</label>
+                </td></tr>
+
+                <!-- question and answer set -->
+                <tr class=survey-row><td class='question__ID'>
+                    <span class="survey-question">Is there pain/discomfort/other that limits your body position?</span>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0010 name=PSGE_0010 id=PSGE_0010-0 value=0 />
+                    <label for=PSGE_0010-0 class="survey-answer">No</label><br>
+                    <input type=radio class=modified_radio__ID data-custom=1 data-id=PSGE_0010 name=PSGE_0010 id=PSGE_0010-1 value=1 />
+                    <label for=PSGE_0010-1 class="survey-answer">Yes, describe</label>
+
+                    <!-- subquestion and answer set -->
+                    <input type=text placeholder='' class=input_box_medium__ID data-custom=1 data-id=PSGE_0010_specify  name=PSGE_0010_specify  id=PSGE_0010_specify  />
+                </td></tr>
+
+            </table><br>&nbsp;<a id=save2__ID class=save_and_back__ID >Save &amp; Back</a>
+        </form>
+
+    </td></tr></table>
+</section>
+<script>
+    
+    document.getElementById("PSGE_0006_specify").addEventListener("blur", () => { parseIntegers("PSGE_0006_specify"); }, false);
+    document.getElementById("PSGE_0007a").addEventListener("blur", () => { parseIntegers("PSGE_0007a"); }, false);
+    document.getElementById("PSGE_0007b").addEventListener("blur", () => { parseIntegers("PSGE_0007b"); }, false);
+    document.getElementById("PSGE_0007c").addEventListener("blur", () => { parseIntegers("PSGE_0007c"); }, false);
+
+    function F__ID(){
+        //----------------------------------
+        VmInclude:__COMPONENT__/grid/form.v3.js
+        VmInclude:__CURRENT_PATH__/task.form.js
+        _json=''
+        //----------------------------------
+        $('#D__ID').on('load',function(){
+            _init();
+            _field_process();
+            _task_fields=$vm.vm['__ID'].op.grid_to_form_parameters.task_fields;
+            _set_participant_field();
+            custom_field_process();
+        })
+        //----------------------------------
+        var custom_field_process=function(){
+            $('#tb__ID tbody *[data-custom=1]').each(function(){
+                var field=$(this).attr('data-id');
+                switch(field){
+                    case "Participant":
+                        $(this).find("input[name='"+field+"']").val(_records[I].Participant);
+                        $(this).find("input[name='"+field+"_uid']").val(_records[I].Participant_uid);
+                    break;
+                    //Radio buttons
+                    //case 'menstral_stop':
+                    //case 'hysterectomy':
+                    //case 'pregnancy':
+                    //case 'hrt':
+                    //case 'hrt_current':
+                    //case 'cycle_consistent':
+                    $('#tb__ID').find("input[name='"+field+"'][value='"+_records[I][field]+"']").prop('checked', true);
+                    $('#tb__ID').find("input[name='"+field+")_']").on('click',function(){
+                        _set_value(this.value,_records,I,field);
+                    })
+                    break;
+                    //Checkbox
+                    case 'Age':
+                    case 'Male':
+                    case 'Male':
+                    case 'CPAP_yes':
+                    case 'CPAP_no':
+                    //case 'OSA15':
+                    case 'HDEEG_yes':
+                    case 'HDEEG_no':
+                    case 'OSA14_yes':
+                    case 'OSA14_no':
+                    //case 'Female':
+                    case 'English_yes':
+                    case 'English_no':
+                    case 'Neuropsych_yes':
+                    case 'Neuropsych_no':
+                    case 'mental_yes':
+                    case 'mental_no':
+                    //case 'dementia':
+                    case 'Centralmeds_yes':
+                    case 'Centralmeds_no':
+                    case 'Shiftworker_yes':
+                    case 'Shiftworker_no':
+                    case 'Travel_yes':
+                    case 'Travel_no':
+                    //case 'Lowsemsa':
+                    if(_records[I][field]=="1" || _records[I][field]=="True" || _records[I][field]=="on" ) $(this).prop('checked', true);
+                    $(this).on('click', function(){
+                        if($(this).prop("checked") == true)   _set_value("1",_records,I,field);
+                        else                                  _set_value("0",_records,I,field);
+                    });
+                    break;
+                    //Text
+                    case 'Age_comment':
+                    case 'Male_comment':
+                    case 'CPAP_comment':
+                    case 'HDEEG_comment':
+                    case 'OSA14_comment':
+                    case 'Head_comment':
+                    //case 'Female_comment':
+                    case 'English_comment':
+                    case 'Neuropsych_comment':
+                    case 'mental_comment':
+                    case 'dementia_comment':
+                    case 'Centralmeds_comment':
+                    case 'Shiftworker_comment':
+                    case 'Travel_comment':
+                    case 'Lowsemsa_comment':
+                        $(this).val(_records[I][field]);
+                        $(this).on('change', function(){
+                            _set_value($(this).val(),_records,I,field);
+                        });
+                    break;
+                }
+            });
+        }
+        //----------------------------------
+        _before_submit=function(record,dbv){
+            return _set_status_and_participant(record,dbv);
+        }
+        //----------------------------------
+        _before_submit_form=function(){
+        }
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/toolbar/toolbar.css
+    VmInclude:__COMPONENT__/grid/form.css
+    #tb__ID tr td:nth-child(2),
+    #tb__ID tr td:nth-child(3),
+    #tb__ID tr td:nth-child(4),
+    #tb__ID tr td:nth-child(5),
+    #tb__ID tr td:nth-child(6)
+    {
+        text-align: center;
+        padding: 5px;
+    }
+</style>
