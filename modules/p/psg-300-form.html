@@ -24,15 +24,48 @@
     				<div class="col">
     					<span>FILE UPLOAD </span>
 						<div class="form-control">
-							<u style='cursor:pointer' id=link_PSG_File_Name__ID></u>
-							<br>
-							<input type="file" name=PSG_File_Name style="margin-top:6px" /> <button type="button" id=x_PSG_File_Name__ID>Remove</button>
+							<u style='cursor:pointer' id=link_File_Name__ID></u>
+                            <input type="file" name=File_Name style="margin-top:6px" class='btn btn-secondary' /><br />
+                            <br />
+                            <button id=x_File_Name__ID type="button" class='btn btn-secondary' onClick="this.form.reset()">Remove</button>
+                            <button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
 						</div>
 					</div>
-                </div>
+                </div>            
+                <!---------------------------------------------------->
+
+                <!-- Variable Inputs---------------------------------->
                 <div class='row row__ID'><div class='col'>
-                    <span>DOB</span>
-                    <input type=text class=form-control name=DOB>
+                    <span>CMS Patient ID</span>
+                    <input type=text class=form-control name=CMS_Patient_ID>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Date of Birth</span>
+                    <input type=text class=form-control name=Date_of_Birth>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Sex</span>
+                    <input type=text class=form-control name=Sex>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wt kg</span>
+                    <input type=text class=form-control name=Wt_kg>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Ht cm</span>
+                    <input type=text class=form-control name=Ht_cm>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>BMI</span>
+                    <input type=text class=form-control name=BMI>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Neck circumference  cm</span>
+                    <input type=text class=form-control name=Neck_circumference__cm>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>ESS</span>
+                    <input type=text class=form-control name=ESS>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
                     <span>Study Date</span>
@@ -47,8 +80,36 @@
                     <input type=text class=form-control name=Study_End_Time>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Time in Bed min</span>
-                    <input type=text class=form-control name=Time_in_Bed_min>
+                    <span>Lights Out Time</span>
+                    <input type=text class=form-control name=Lights_Out_Time>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Lights On Time</span>
+                    <input type=text class=form-control name=Lights_On_Time>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Sleep Onset Time</span>
+                    <input type=text class=form-control name=Sleep_Onset_Time>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Sleep Offset Time</span>
+                    <input type=text class=form-control name=Sleep_Offset_Time>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Time in Bed  min</span>
+                    <input type=text class=form-control name=Time_in_Bed__min>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Total Sleep Time min</span>
+                    <input type=text class=form-control name=Total_Sleep_Time_min>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Wake After Sleep Onset min</span>
+                    <input type=text class=form-control name=Wake_After_Sleep_Onset_min>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Sleep Efficiency Percent</span>
+                    <input type=text class=form-control name=Sleep_Efficiency_Percent>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
                     <span>Sleep Latency min</span>
@@ -59,1173 +120,819 @@
                     <input type=text class=form-control name=REM_Latency_min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Sleep Efficiency Percent</span>
-                    <input type=text class=form-control name=Sleep_Efficiency_Percent>
+                    <span>N2 Latency min</span>
+                    <input type=text class=form-control name=N2_Latency_min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Time Awake During Sleep Period min</span>
-                    <input type=text class=form-control name=Total_Time_Awake_During_Sleep_Period_min>
+                    <span>N3 Latency min</span>
+                    <input type=text class=form-control name=N3_Latency_min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Sleep Time min</span>
-                    <input type=text class=form-control name=Total_Sleep_Time_min>
+                    <span>NREM  min</span>
+                    <input type=text class=form-control name=NREM__min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>NREM min</span>
-                    <input type=text class=form-control name=NREM_min>
+                    <span>NREM  Percent</span>
+                    <input type=text class=form-control name=NREM__Percent>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>NREM Percent</span>
-                    <input type=text class=form-control name=NREM_Percent>
+                    <span>N1 min</span>
+                    <input type=text class=form-control name=N1_min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>REM min</span>
-                    <input type=text class=form-control name=REM_min>
+                    <span>N1 Percent</span>
+                    <input type=text class=form-control name=N1_Percent>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>REM Percent</span>
-                    <input type=text class=form-control name=REM_Percent>
+                    <span>N2 min</span>
+                    <input type=text class=form-control name=N2_min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 1 min</span>
-                    <input type=text class=form-control name=Stage_1_min>
+                    <span>N2 Percent</span>
+                    <input type=text class=form-control name=N2_Percent>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 1 Percent</span>
-                    <input type=text class=form-control name=Stage_1_Percent>
+                    <span>N3 min</span>
+                    <input type=text class=form-control name=N3_min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 2 min</span>
-                    <input type=text class=form-control name=Stage_2_min>
+                    <span>N3 Percent</span>
+                    <input type=text class=form-control name=N3_Percent>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 2 Percent</span>
-                    <input type=text class=form-control name=Stage_2_Percent>
+                    <span>REM  min</span>
+                    <input type=text class=form-control name=REM__min>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 3 min</span>
-                    <input type=text class=form-control name=Stage_3_min>
+                    <span>REM  Percent</span>
+                    <input type=text class=form-control name=REM__Percent>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 3 Percent</span>
-                    <input type=text class=form-control name=Stage_3_Percent>
+                    <span>NREM min Supine</span>
+                    <input type=text class=form-control name=NREM_min_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 4 min</span>
-                    <input type=text class=form-control name=Stage_4_min>
+                    <span>NREM Percent Supine</span>
+                    <input type=text class=form-control name=NREM_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Stage 4 Percent</span>
-                    <input type=text class=form-control name=Stage_4_Percent>
+                    <span>N1 min Supine</span>
+                    <input type=text class=form-control name=N1_min_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Arousal Count TST</span>
-                    <input type=text class=form-control name=Total_Arousal_Count_TST>
+                    <span>N1 Percent Supine</span>
+                    <input type=text class=form-control name=N1_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Arousal Count REM</span>
-                    <input type=text class=form-control name=Total_Arousal_Count_REM>
+                    <span>N1 Percent Supine</span>
+                    <input type=text class=form-control name=N1_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Arousal Count NREM</span>
-                    <input type=text class=form-control name=Total_Arousal_Count_NREM>
+                    <span>N2 min Supine</span>
+                    <input type=text class=form-control name=N2_min_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Arousals Index TST</span>
-                    <input type=text class=form-control name=Total_Arousals_Index_TST>
+                    <span>N2 Percent Supine</span>
+                    <input type=text class=form-control name=N2_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Arousals Index REM</span>
-                    <input type=text class=form-control name=Total_Arousals_Index_REM>
+                    <span>N2 Percent Supine</span>
+                    <input type=text class=form-control name=N2_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Arousals Index NREM</span>
-                    <input type=text class=form-control name=Total_Arousals_Index_NREM>
+                    <span>N3 min Supine</span>
+                    <input type=text class=form-control name=N3_min_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Respiratory Arousal Count TST</span>
-                    <input type=text class=form-control name=Respiratory_Arousal_Count_TST>
+                    <span>N3 Percent Supine</span>
+                    <input type=text class=form-control name=N3_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Respiratory Arousal Count REM</span>
-                    <input type=text class=form-control name=Respiratory_Arousal_Count_REM>
+                    <span>N3 Percent Supine</span>
+                    <input type=text class=form-control name=N3_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Respiratory Arousal Count NREM</span>
-                    <input type=text class=form-control name=Respiratory_Arousal_Count_NREM>
+                    <span>REM min Supine</span>
+                    <input type=text class=form-control name=REM_min_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Respiratory Arousals Index TST</span>
-                    <input type=text class=form-control name=Respiratory_Arousals_Index_TST>
+                    <span>REM Percent Supine</span>
+                    <input type=text class=form-control name=REM_Percent_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Respiratory Arousals Index REM</span>
-                    <input type=text class=form-control name=Respiratory_Arousals_Index_REM>
+                    <span>NREM min Nonsupine</span>
+                    <input type=text class=form-control name=NREM_min_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Respiratory Arousals Index NREM</span>
-                    <input type=text class=form-control name=Respiratory_Arousals_Index_NREM>
+                    <span>NREM Percent Nonsupine</span>
+                    <input type=text class=form-control name=NREM_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Spontaneous Arousal Count TST</span>
-                    <input type=text class=form-control name=Spontaneous_Arousal_Count_TST>
+                    <span>N1 min Nonsupine</span>
+                    <input type=text class=form-control name=N1_min_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Spontaneous Arousal Count REM</span>
-                    <input type=text class=form-control name=Spontaneous_Arousal_Count_REM>
+                    <span>N1 Percent Nonsupine</span>
+                    <input type=text class=form-control name=N1_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Spontaneous Arousal Count NREM</span>
-                    <input type=text class=form-control name=Spontaneous_Arousal_Count_NREM>
+                    <span>N1 Percent Nonsupine</span>
+                    <input type=text class=form-control name=N1_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Spontaneous Arousals Index TST</span>
-                    <input type=text class=form-control name=Spontaneous_Arousals_Index_TST>
+                    <span>N2 min Nonsupine</span>
+                    <input type=text class=form-control name=N2_min_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Spontaneous Arousals Index REM</span>
-                    <input type=text class=form-control name=Spontaneous_Arousals_Index_REM>
+                    <span>N2 Percent Nonsupine</span>
+                    <input type=text class=form-control name=N2_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Spontaneous Arousals Index NREM</span>
-                    <input type=text class=form-control name=Spontaneous_Arousals_Index_NREM>
+                    <span>N2 Percent Nonsupine</span>
+                    <input type=text class=form-control name=N2_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Limb Movement Arousal Count TST</span>
-                    <input type=text class=form-control name=Limb_Movement_Arousal_Count_TST>
+                    <span>N3 min Nonsupine</span>
+                    <input type=text class=form-control name=N3_min_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Limb Movement Arousal Count REM</span>
-                    <input type=text class=form-control name=Limb_Movement_Arousal_Count_REM>
+                    <span>N3 Percent Nonsupine</span>
+                    <input type=text class=form-control name=N3_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Limb Movement Arousal Count NREM</span>
-                    <input type=text class=form-control name=Limb_Movement_Arousal_Count_NREM>
+                    <span>N3 Percent Nonsupine</span>
+                    <input type=text class=form-control name=N3_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Limb Movement Arousals Index TST</span>
-                    <input type=text class=form-control name=Limb_Movement_Arousals_Index_TST>
+                    <span>REM min Nonsupine</span>
+                    <input type=text class=form-control name=REM_min_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Limb Movement Arousals Index REM</span>
-                    <input type=text class=form-control name=Limb_Movement_Arousals_Index_REM>
+                    <span>REM Percent Nonsupine</span>
+                    <input type=text class=form-control name=REM_Percent_Nonsupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Limb Movement Arousals Index NREM</span>
-                    <input type=text class=form-control name=Limb_Movement_Arousals_Index_NREM>
+                    <span>Awakenings TST</span>
+                    <input type=text class=form-control name=Awakenings_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Count TST</span>
-                    <input type=text class=form-control name=Total_Apnea_Count_TST>
+                    <span>Awakenings REM</span>
+                    <input type=text class=form-control name=Awakenings_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Count REM</span>
-                    <input type=text class=form-control name=Total_Apnea_Count_REM>
+                    <span>Awakening NREM</span>
+                    <input type=text class=form-control name=Awakening_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Count NREM</span>
-                    <input type=text class=form-control name=Total_Apnea_Count_NREM>
+                    <span>Arousal Index TST</span>
+                    <input type=text class=form-control name=Arousal_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Index TST</span>
-                    <input type=text class=form-control name=Total_Apnea_Index_TST>
+                    <span>Arousal Index REM</span>
+                    <input type=text class=form-control name=Arousal_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Index REM</span>
-                    <input type=text class=form-control name=Total_Apnea_Index_REM>
+                    <span>Arousal Index NREM</span>
+                    <input type=text class=form-control name=Arousal_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Index NREM</span>
-                    <input type=text class=form-control name=Total_Apnea_Index_NREM>
+                    <span>Arousal Index N1</span>
+                    <input type=text class=form-control name=Arousal_Index_N1>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Apnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Apnea_Duration_TST>
+                    <span>Arousal Index N2</span>
+                    <input type=text class=form-control name=Arousal_Index_N2>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Max Apnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Apnea_Duration_TST>
+                    <span>Arousal Index N3</span>
+                    <input type=text class=form-control name=Arousal_Index_N3>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Arousal Count TST</span>
+                    <input type=text class=form-control name=Arousal_Count_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Arousal Count REM</span>
+                    <input type=text class=form-control name=Arousal_Count_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Arousal Count NREM</span>
+                    <input type=text class=form-control name=Arousal_Count_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Arousal Count N1</span>
+                    <input type=text class=form-control name=Arousal_Count_N1>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Arousal Count N2</span>
+                    <input type=text class=form-control name=Arousal_Count_N2>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Arousal Count N3</span>
+                    <input type=text class=form-control name=Arousal_Count_N3>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Spon Arousals Index TST</span>
+                    <input type=text class=form-control name=Spon_Arousals_Index_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Spon Arousals Index REM</span>
+                    <input type=text class=form-control name=Spon_Arousals_Index_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Spon Arousals Index NREM</span>
+                    <input type=text class=form-control name=Spon_Arousals_Index_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Spon Arousal Count TST</span>
+                    <input type=text class=form-control name=Spon_Arousal_Count_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Spon Arousal Count REM</span>
+                    <input type=text class=form-control name=Spon_Arousal_Count_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Spon Arousal Count NREM</span>
+                    <input type=text class=form-control name=Spon_Arousal_Count_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Resp Arousals Index TST</span>
+                    <input type=text class=form-control name=Resp_Arousals_Index_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Resp Arousals Index REM</span>
+                    <input type=text class=form-control name=Resp_Arousals_Index_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Resp Arousals Index NREM</span>
+                    <input type=text class=form-control name=Resp_Arousals_Index_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Resp Arousal Count TST</span>
+                    <input type=text class=form-control name=Resp_Arousal_Count_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Resp Arousal Count REM</span>
+                    <input type=text class=form-control name=Resp_Arousal_Count_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Resp Arousal Count NREM</span>
+                    <input type=text class=form-control name=Resp_Arousal_Count_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Limb Arousals Index TST</span>
+                    <input type=text class=form-control name=Limb_Arousals_Index_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Limb Arousals Index REM</span>
+                    <input type=text class=form-control name=Limb_Arousals_Index_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Limb Arousals Index NREM</span>
+                    <input type=text class=form-control name=Limb_Arousals_Index_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Limb Arousal Count TST</span>
+                    <input type=text class=form-control name=Limb_Arousal_Count_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Limb Arousal Count REM</span>
+                    <input type=text class=form-control name=Limb_Arousal_Count_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Limb Arousal Count NREM</span>
+                    <input type=text class=form-control name=Limb_Arousal_Count_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Periodic Limb Arousals Index TST</span>
+                    <input type=text class=form-control name=Periodic_Limb_Arousals_Index_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Periodic Limb Arousals Index REM</span>
+                    <input type=text class=form-control name=Periodic_Limb_Arousals_Index_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Periodic Limb Arousals Index NREM</span>
+                    <input type=text class=form-control name=Periodic_Limb_Arousals_Index_NREM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Periodic Limb Arousal Count TST</span>
+                    <input type=text class=form-control name=Periodic_Limb_Arousal_Count_TST>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Periodic Limb Arousal Count REM</span>
+                    <input type=text class=form-control name=Periodic_Limb_Arousal_Count_REM>
+                </div></div>
+                <div class='row row__ID'><div class='col'>
+                    <span>Periodic Limb Arousal Count NREM</span>
+                    <input type=text class=form-control name=Periodic_Limb_Arousal_Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
                     <span>Central Apnea Count TST</span>
                     <input type=text class=form-control name=Central_Apnea_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count REM</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count NREM</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Supine</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Prone</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Left Side</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Right Side</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
                     <span>Central Apnea Index TST</span>
                     <input type=text class=form-control name=Central_Apnea_Index_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index REM</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index NREM</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Supine</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Prone</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Left Side</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Right Side</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean Central Apnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Central_Apnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max Central Apnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Central_Apnea_Duration_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
                     <span>Obstructive Apnea Count TST</span>
                     <input type=text class=form-control name=Obstructive_Apnea_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count REM</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count NREM</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Supine</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Prone</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Left Side</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Right Side</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
                     <span>Obstructive Apnea Index TST</span>
                     <input type=text class=form-control name=Obstructive_Apnea_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index REM</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_REM>
+                    <span>Hypopnea  Count TST</span>
+                    <input type=text class=form-control name=Hypopnea__Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index NREM</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_NREM>
+                    <span>Hypopnea Index TST</span>
+                    <input type=text class=form-control name=Hypopnea_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Supine</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Supine>
+                    <span>RERA Count TST</span>
+                    <input type=text class=form-control name=RERA_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Prone</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Left Side</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Right Side</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean Obstructive Apnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Obstructive_Apnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max Obstructive Apnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Obstructive_Apnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count TST</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count REM</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count NREM</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count Supine</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count Prone</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count Left Side</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Count Right Side</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Count_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index TST</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index REM</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index NREM</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index Supine</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index Prone</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index Left Side</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mixed Apnea Index Right Side</span>
-                    <input type=text class=form-control name=Mixed_Apnea_Index_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean Mixed Apnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Mixed_Apnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max Mixed Apnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Mixed_Apnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count TST</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count REM</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count NREM</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Supine</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Prone</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Left Side</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Right Side</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index TST</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index REM</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index NREM</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Supine</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Prone</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Prone>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Left Side</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Left_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Right Side</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Right_Side>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean Hypopnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Hypopnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max Hypopnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Hypopnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Hypopnea Count TST</span>
-                    <input type=text class=form-control name=Central_Hypopnea_Count_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Hypopnea Count REM</span>
-                    <input type=text class=form-control name=Central_Hypopnea_Count_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Hypopnea Count NREM</span>
-                    <input type=text class=form-control name=Central_Hypopnea_Count_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Hypopnea Index TST</span>
-                    <input type=text class=form-control name=Central_Hypopnea_Index_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Hypopnea Index REM</span>
-                    <input type=text class=form-control name=Central_Hypopnea_Index_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Central Hypopnea Index NREM</span>
-                    <input type=text class=form-control name=Central_Hypopnea_Index_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean Central Hypopnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Central_Hypopnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max Central Hypopnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Central_Hypopnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Hypopnea Count TST</span>
-                    <input type=text class=form-control name=Obstructive_Hypopnea_Count_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Hypopnea Count REM</span>
-                    <input type=text class=form-control name=Obstructive_Hypopnea_Count_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Hypopnea Count NREM</span>
-                    <input type=text class=form-control name=Obstructive_Hypopnea_Count_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Hypopnea Index TST</span>
-                    <input type=text class=form-control name=Obstructive_Hypopnea_Index_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Hypopnea Index REM</span>
-                    <input type=text class=form-control name=Obstructive_Hypopnea_Index_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Hypopnea Index NREM</span>
-                    <input type=text class=form-control name=Obstructive_Hypopnea_Index_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean Obstructive Hypopnea Duration TST</span>
-                    <input type=text class=form-control name=Mean_Obstructive_Hypopnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max Obstructive Hypopnea Duration TST</span>
-                    <input type=text class=form-control name=Max_Obstructive_Hypopnea_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Count TST</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Count_TST>
+                    <span>RERA Index TST</span>
+                    <input type=text class=form-control name=RERA_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
                     <span>Apnea Hypopnea Index TST</span>
                     <input type=text class=form-control name=Apnea_Hypopnea_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Count REM</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Count_REM>
+                    <span>Respiratory Disturbance Index TST</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Count NREM</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Count_NREM>
+                    <span>Central Apnea Count REM</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count REM</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_REM>
+                    <span>Central Apnea Index REM</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count NREM</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_NREM>
+                    <span>Obstructive Apnea Count REM</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Supine</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Supine>
+                    <span>Obstructive Apnea Index REM</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Prone</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Prone>
+                    <span>Hypopnea  Count REM</span>
+                    <input type=text class=form-control name=Hypopnea__Count_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Left Side</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Left_Side>
+                    <span>Hypopnea Index REM</span>
+                    <input type=text class=form-control name=Hypopnea_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Right Side</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Right_Side>
+                    <span>RERA Count REM</span>
+                    <input type=text class=form-control name=RERA_Count_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index REM</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_REM>
+                    <span>RERA Index REM</span>
+                    <input type=text class=form-control name=RERA_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index NREM</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_NREM>
+                    <span>Apnea Hypopnea Index REM</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Supine</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Supine>
+                    <span>Respiratory Disturbance Index REM</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Prone</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Prone>
+                    <span>Central Apnea Count NREM</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Left Side</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Left_Side>
+                    <span>Central Apnea Index NREM</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Right Side</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Right_Side>
+                    <span>Obstructive Apnea Count NREM</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Count TST w Desat</span>
-                    <input type=text class=form-control name=Total_Apnea_Count_TST_w_Desat>
+                    <span>Obstructive Apnea Index NREM</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Count REM w Desat</span>
-                    <input type=text class=form-control name=Total_Apnea_Count_REM_w_Desat>
+                    <span>Hypopnea  Count NREM</span>
+                    <input type=text class=form-control name=Hypopnea__Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Count NREM w Desat</span>
-                    <input type=text class=form-control name=Total_Apnea_Count_NREM_w_Desat>
+                    <span>Hypopnea Index NREM</span>
+                    <input type=text class=form-control name=Hypopnea_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Index TST w Desat</span>
-                    <input type=text class=form-control name=Total_Apnea_Index_TST_w_Desat>
+                    <span>RERA Count NREM</span>
+                    <input type=text class=form-control name=RERA_Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Index REM w Desat</span>
-                    <input type=text class=form-control name=Total_Apnea_Index_REM_w_Desat>
+                    <span>RERA Index NREM</span>
+                    <input type=text class=form-control name=RERA_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Apnea Index NREM w Desat</span>
-                    <input type=text class=form-control name=Total_Apnea_Index_NREM_w_Desat>
+                    <span>Apnea Hypopnea Index NREM</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Apnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Mean_Apnea_Duration_TST_w_Desat>
+                    <span>Respiratory Disturbance Index NREM</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Max Apnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Max_Apnea_Duration_TST_w_Desat>
+                    <span>Central Apnea Count TST Supine</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count TST w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_TST_w_Desat>
+                    <span>Central Apnea Index TST Supine</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count REM w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_REM_w_Desat>
+                    <span>Obstructive Apnea Count TST Supine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count NREM w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_NREM_w_Desat>
+                    <span>Obstructive Apnea Index TST Supine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Supine w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Supine_w_Desat>
+                    <span>Hypopnea  Count TST Supine</span>
+                    <input type=text class=form-control name=Hypopnea__Count_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Prone w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Prone_w_Desat>
+                    <span>Hypopnea Index TST Supine</span>
+                    <input type=text class=form-control name=Hypopnea_Index_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Left Side w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Left_Side_w_Desat>
+                    <span>RERA Count TST Supine</span>
+                    <input type=text class=form-control name=RERA_Count_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Count Right Side w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Count_Right_Side_w_Desat>
+                    <span>RERA Index TST Supine</span>
+                    <input type=text class=form-control name=RERA_Index_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index TST w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_TST_w_Desat>
+                    <span>Apnea Hypopnea Index TST Supine</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index REM w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_REM_w_Desat>
+                    <span>Respiratory Disturbance Index TST Supine</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_TST_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index NREM w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_NREM_w_Desat>
+                    <span>Central Apnea Count REM Supine</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Supine w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Supine_w_Desat>
+                    <span>Central Apnea Index REM Supine</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Prone w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Prone_w_Desat>
+                    <span>Obstructive Apnea Count REM Supine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Left Side w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Left_Side_w_Desat>
+                    <span>Obstructive Apnea Index REM Supine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Central Apnea Index Right Side w Desat</span>
-                    <input type=text class=form-control name=Central_Apnea_Index_Right_Side_w_Desat>
+                    <span>Hypopnea Count REM Supine</span>
+                    <input type=text class=form-control name=Hypopnea_Count_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Central Apnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Mean_Central_Apnea_Duration_TST_w_Desat>
+                    <span>Hypopnea Index REM Supine</span>
+                    <input type=text class=form-control name=Hypopnea_Index_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Max Central Apnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Max_Central_Apnea_Duration_TST_w_Desat>
+                    <span>RERA Count REM Supine</span>
+                    <input type=text class=form-control name=RERA_Count_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count TST w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_TST_w_Desat>
+                    <span>RERA Index REM Supine</span>
+                    <input type=text class=form-control name=RERA_Index_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count REM w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_REM_w_Desat>
+                    <span>Apnea Hypopnea Index REM Supine</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count NREM w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_NREM_w_Desat>
+                    <span>Respiratory Disturbance Index REM Supine</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_REM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Supine w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Supine_w_Desat>
+                    <span>Central Apnea Count NREM Supine</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Prone w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Prone_w_Desat>
+                    <span>Central Apnea Index NREM Supine</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Left Side w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Left_Side_w_Desat>
+                    <span>Obstructive Apnea Count NREM Supine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Count Right Side w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Count_Right_Side_w_Desat>
+                    <span>Obstructive Apnea Index NREM Supine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index TST w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_TST_w_Desat>
+                    <span>Hypopnea Count NREM Supine</span>
+                    <input type=text class=form-control name=Hypopnea_Count_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index REM w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_REM_w_Desat>
+                    <span>Hypopnea Index NREM Supine</span>
+                    <input type=text class=form-control name=Hypopnea_Index_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index NREM w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_NREM_w_Desat>
+                    <span>RERA Count NREM Supine</span>
+                    <input type=text class=form-control name=RERA_Count_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Supine w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Supine_w_Desat>
+                    <span>RERA Index NREM Supine</span>
+                    <input type=text class=form-control name=RERA_Index_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Prone w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Prone_w_Desat>
+                    <span>Apnea Hypopnea Index NREM Supine</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Left Side w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Left_Side_w_Desat>
+                    <span>Respiratory Disturbance Index NREM Supine</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_NREM_Supine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Obstructive Apnea Index Right Side w Desat</span>
-                    <input type=text class=form-control name=Obstructive_Apnea_Index_Right_Side_w_Desat>
+                    <span>Central Apnea Count TST NonSupine</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Obstructive Apnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Mean_Obstructive_Apnea_Duration_TST_w_Desat>
+                    <span>Central Apnea Index TST NonSupine</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Max Obstructive Apnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Max_Obstructive_Apnea_Duration_TST_w_Desat>
+                    <span>Obstructive Apnea Count TST NonSupine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count TST w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_TST_w_Desat>
+                    <span>Obstructive Apnea Index TST NonSupine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count REM w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_REM_w_Desat>
+                    <span>Hypopnea  Count TST NonSupine</span>
+                    <input type=text class=form-control name=Hypopnea__Count_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count NREM w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_NREM_w_Desat>
+                    <span>Hypopnea Index TST NonSupine</span>
+                    <input type=text class=form-control name=Hypopnea_Index_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Supine w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Supine_w_Desat>
+                    <span>RERA Count TST NonSupine</span>
+                    <input type=text class=form-control name=RERA_Count_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Prone w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Prone_w_Desat>
+                    <span>RERA Index TST NonSupine</span>
+                    <input type=text class=form-control name=RERA_Index_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Left Side w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Left_Side_w_Desat>
+                    <span>Apnea Hypopnea Index TST NonSupine</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Count Right Side w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Count_Right_Side_w_Desat>
+                    <span>Respiratory Disturbance Index TST NonSupine</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_TST_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index TST w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_TST_w_Desat>
+                    <span>Central Apnea Count REM NonSupine</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index REM w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_REM_w_Desat>
+                    <span>Central Apnea Index REM NonSupine</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index NREM w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_NREM_w_Desat>
+                    <span>Obstructive Apnea Count REM NonSupine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Supine w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Supine_w_Desat>
+                    <span>Obstructive Apnea Index REM NonSupine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Prone w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Prone_w_Desat>
+                    <span>Hypopnea Count REM NonSupine</span>
+                    <input type=text class=form-control name=Hypopnea_Count_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Left Side w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Left_Side_w_Desat>
+                    <span>Hypopnea Index REM NonSupine</span>
+                    <input type=text class=form-control name=Hypopnea_Index_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Hypopnea Index Right Side w Desat</span>
-                    <input type=text class=form-control name=Total_Hypopnea_Index_Right_Side_w_Desat>
+                    <span>RERA Count REM NonSupine</span>
+                    <input type=text class=form-control name=RERA_Count_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Hypopnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Mean_Hypopnea_Duration_TST_w_Desat>
+                    <span>RERA Index REM NonSupine</span>
+                    <input type=text class=form-control name=RERA_Index_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Max Hypopnea Duration TST w Desat</span>
-                    <input type=text class=form-control name=Max_Hypopnea_Duration_TST_w_Desat>
+                    <span>Apnea Hypopnea Index REM NonSupine</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Count TST w Desat</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Count_TST_w_Desat>
+                    <span>Respiratory Disturbance Index REM NonSupine</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_REM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Index TST w Desat</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Index_TST_w_Desat>
+                    <span>Central Apnea Count NREM NonSupine</span>
+                    <input type=text class=form-control name=Central_Apnea_Count_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Count REM w Desat</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Count_REM_w_Desat>
+                    <span>Central Apnea Index NREM NonSupine</span>
+                    <input type=text class=form-control name=Central_Apnea_Index_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Apnea Hypopnea Count NREM w Desat</span>
-                    <input type=text class=form-control name=Apnea_Hypopnea_Count_NREM_w_Desat>
+                    <span>Obstructive Apnea Count NREM NonSupine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Count_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count REM w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_REM_w_Desat>
+                    <span>Obstructive Apnea Index NREM NonSupine</span>
+                    <input type=text class=form-control name=Obstructive_Apnea_Index_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count NREM w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_NREM_w_Desat>
+                    <span>Hypopnea Count NREM NonSupine</span>
+                    <input type=text class=form-control name=Hypopnea_Count_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Supine w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Supine_w_Desat>
+                    <span>Hypopnea Index NREM NonSupine</span>
+                    <input type=text class=form-control name=Hypopnea_Index_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Prone w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Prone_w_Desat>
+                    <span>RERA Count NREM NonSupine</span>
+                    <input type=text class=form-control name=RERA_Count_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Left Side w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Left_Side_w_Desat>
+                    <span>RERA Index NREM NonSupine</span>
+                    <input type=text class=form-control name=RERA_Index_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Count Right Side w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Count_Right_Side_w_Desat>
+                    <span>Apnea Hypopnea Index NREM NonSupine</span>
+                    <input type=text class=form-control name=Apnea_Hypopnea_Index_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index REM w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_REM_w_Desat>
+                    <span>Respiratory Disturbance Index NREM NonSupine</span>
+                    <input type=text class=form-control name=Respiratory_Disturbance_Index_NREM_NonSupine>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index NREM w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_NREM_w_Desat>
+                    <span>SpO2 lessthan 70percent min TIB</span>
+                    <input type=text class=form-control name=SpO2_lessthan_70percent_min_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Supine w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Supine_w_Desat>
+                    <span>SpO2 Percentage In Range 70 to 79 min TIB</span>
+                    <input type=text class=form-control name=SpO2_Percentage_In_Range_70_to_79_min_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Prone w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Prone_w_Desat>
+                    <span>SpO2 lessthan 80percent min TIB</span>
+                    <input type=text class=form-control name=SpO2_lessthan_80percent_min_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Left Side w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Left_Side_w_Desat>
+                    <span>SpO2 Percentage In Range 80 to 89 min TIB</span>
+                    <input type=text class=form-control name=SpO2_Percentage_In_Range_80_to_89_min_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Total Respiratory Index Right Side w Desat</span>
-                    <input type=text class=form-control name=Total_Respiratory_Index_Right_Side_w_Desat>
+                    <span>SpO2 lessthan 90percent min TIB</span>
+                    <input type=text class=form-control name=SpO2_lessthan_90percent_min_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count WASO</span>
-                    <input type=text class=form-control name=Desat_Event_Count_WASO>
+                    <span>SpO2 Percentage In Range 90 to 100 min TIB</span>
+                    <input type=text class=form-control name=SpO2_Percentage_In_Range_90_to_100_min_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count TST</span>
-                    <input type=text class=form-control name=Desat_Event_Count_TST>
+                    <span>Mean SpO2 percent TIB</span>
+                    <input type=text class=form-control name=Mean_SpO2_percent_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count REM</span>
-                    <input type=text class=form-control name=Desat_Event_Count_REM>
+                    <span>Mean SpO2 percent TST</span>
+                    <input type=text class=form-control name=Mean_SpO2_percent_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count NREM</span>
-                    <input type=text class=form-control name=Desat_Event_Count_NREM>
+                    <span>Mean SpO2 percent Wake</span>
+                    <input type=text class=form-control name=Mean_SpO2_percent_Wake>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index WASO</span>
-                    <input type=text class=form-control name=Desat_Event_Index_WASO>
+                    <span>Mean SpO2 percent REM</span>
+                    <input type=text class=form-control name=Mean_SpO2_percent_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index TST</span>
-                    <input type=text class=form-control name=Desat_Event_Index_TST>
+                    <span>Mean SpO2 percent NREM</span>
+                    <input type=text class=form-control name=Mean_SpO2_percent_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index REM</span>
-                    <input type=text class=form-control name=Desat_Event_Index_REM>
+                    <span>Min SpO2 percent TIB</span>
+                    <input type=text class=form-control name=Min_SpO2_percent_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index NREM</span>
-                    <input type=text class=form-control name=Desat_Event_Index_NREM>
+                    <span>Min SpO2 percent TST</span>
+                    <input type=text class=form-control name=Min_SpO2_percent_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Desaturation Duration TST seconds</span>
-                    <input type=text class=form-control name=Mean_Desaturation_Duration_TST_seconds>
+                    <span>Min SpO2 percent Wake</span>
+                    <input type=text class=form-control name=Min_SpO2_percent_Wake>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Desaturation Duration REM seconds</span>
-                    <input type=text class=form-control name=Mean_Desaturation_Duration_REM_seconds>
+                    <span>Min SpO2 percent REM</span>
+                    <input type=text class=form-control name=Min_SpO2_percent_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean Desaturation Duration Non REM seconds</span>
-                    <input type=text class=form-control name=Mean_Desaturation_Duration_Non_REM_seconds>
+                    <span>Min SpO2 percent NREM</span>
+                    <input type=text class=form-control name=Min_SpO2_percent_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count TIB</span>
-                    <input type=text class=form-control name=Desat_Event_Count_TIB>
+                    <span>O2 Desat3percent index TIB</span>
+                    <input type=text class=form-control name=O2_Desat3percent_index_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count Supine</span>
-                    <input type=text class=form-control name=Desat_Event_Count_Supine>
+                    <span>O2 Desat3percent Index TST</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Count NonSupine</span>
-                    <input type=text class=form-control name=Desat_Event_Count_NonSupine>
+                    <span>O2 Desat3percent Index REM</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index TIB</span>
-                    <input type=text class=form-control name=Desat_Event_Index_TIB>
+                    <span>O2 Desat3percent Index NREM</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index Supine</span>
-                    <input type=text class=form-control name=Desat_Event_Index_Supine>
+                    <span>O2 Desat3percent Count TIB</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Count_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Desat Event Index NonSupine</span>
-                    <input type=text class=form-control name=Desat_Event_Index_NonSupine>
+                    <span>O2 Desat3percent Count TST</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent Supine</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_Supine>
+                    <span>O2 Desat3percent Count REM</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Count_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent Non Supine</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_Non_Supine>
+                    <span>O2 Desat3percent Count NREM</span>
+                    <input type=text class=form-control name=O2_Desat3percent_Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage In Range 90 to 100 TIB</span>
-                    <input type=text class=form-control name=SaO2_Percentage_In_Range_90_to_100_TIB>
+                    <span>O2 Desat4percent index TIB</span>
+                    <input type=text class=form-control name=O2_Desat4percent_index_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage In Range 80 to 89 TIB</span>
-                    <input type=text class=form-control name=SaO2_Percentage_In_Range_80_to_89_TIB>
+                    <span>O2 Desat4percent Index TST</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage In Range 70 to 79 TIB</span>
-                    <input type=text class=form-control name=SaO2_Percentage_In_Range_70_to_79_TIB>
+                    <span>O2 Desat4percent Index REM</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Index_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage In Range 60 to 69 TIB</span>
-                    <input type=text class=form-control name=SaO2_Percentage_In_Range_60_to_69_TIB>
+                    <span>O2 Desat4percent Index NREM</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Index_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage In Range 50 to 59 TIB</span>
-                    <input type=text class=form-control name=SaO2_Percentage_In_Range_50_to_59_TIB>
+                    <span>O2 Desat4percent Count TIB</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Count_TIB>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage Below 50 Wake</span>
-                    <input type=text class=form-control name=SaO2_Percentage_Below_50_Wake>
+                    <span>O2 Desat4percent Count TST</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage Below 50 TIB</span>
-                    <input type=text class=form-control name=SaO2_Percentage_Below_50_TIB>
+                    <span>O2 Desat4percent Count REM</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Count_REM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage Below 50 TST</span>
-                    <input type=text class=form-control name=SaO2_Percentage_Below_50_TST>
+                    <span>O2 Desat4percent Count NREM</span>
+                    <input type=text class=form-control name=O2_Desat4percent_Count_NREM>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage Below 50 REM</span>
-                    <input type=text class=form-control name=SaO2_Percentage_Below_50_REM>
+                    <span>Limb Movement Count TST</span>
+                    <input type=text class=form-control name=Limb_Movement_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>SaO2 Percentage Below 50 NREM</span>
-                    <input type=text class=form-control name=SaO2_Percentage_Below_50_NREM>
+                    <span>Limb Movement Index TST</span>
+                    <input type=text class=form-control name=Limb_Movement_Index_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Max SaO2Percent TIB</span>
-                    <input type=text class=form-control name=Max_SaO2Percent_TIB>
+                    <span>PLM Series Count TST</span>
+                    <input type=text class=form-control name=PLM_Series_Count_TST>
                 </div></div>
                 <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent TIB</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_TIB>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Min SaO2Percent TIB</span>
-                    <input type=text class=form-control name=Min_SaO2Percent_TIB>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max SaO2Percent Wake</span>
-                    <input type=text class=form-control name=Max_SaO2Percent_Wake>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent Wake</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_Wake>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Min SaO2Percent Wake</span>
-                    <input type=text class=form-control name=Min_SaO2Percent_Wake>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max SaO2Percent TST</span>
-                    <input type=text class=form-control name=Max_SaO2Percent_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent TST</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Min SaO2Percent TST</span>
-                    <input type=text class=form-control name=Min_SaO2Percent_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max SaO2Percent REM</span>
-                    <input type=text class=form-control name=Max_SaO2Percent_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent REM</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Min SaO2Percent REM</span>
-                    <input type=text class=form-control name=Min_SaO2Percent_REM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Max SaO2Percent NREM</span>
-                    <input type=text class=form-control name=Max_SaO2Percent_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Mean SaO2Percent NREM</span>
-                    <input type=text class=form-control name=Mean_SaO2Percent_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Min SaO2Percent NREM</span>
-                    <input type=text class=form-control name=Min_SaO2Percent_NREM>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Supine Sleep Time</span>
-                    <input type=text class=form-control name=Supine_Sleep_Time>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Supine Sleep Time Minutes</span>
-                    <input type=text class=form-control name=Supine_Sleep_Time_Minutes>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Supine Sleep Time Hours</span>
-                    <input type=text class=form-control name=Supine_Sleep_Time_Hours>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Supine Sleep Time PercentTST</span>
-                    <input type=text class=form-control name=Supine_Sleep_Time_PercentTST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Prone Sleep Time</span>
-                    <input type=text class=form-control name=Prone_Sleep_Time>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Prone Sleep Time Minutes</span>
-                    <input type=text class=form-control name=Prone_Sleep_Time_Minutes>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Prone Sleep Time Hours</span>
-                    <input type=text class=form-control name=Prone_Sleep_Time_Hours>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Prone Sleep Time PercentTST</span>
-                    <input type=text class=form-control name=Prone_Sleep_Time_PercentTST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Left Side Sleep Time</span>
-                    <input type=text class=form-control name=Left_Side_Sleep_Time>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Left Side Sleep Time Minutes</span>
-                    <input type=text class=form-control name=Left_Side_Sleep_Time_Minutes>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Left Side Sleep Time Hours</span>
-                    <input type=text class=form-control name=Left_Side_Sleep_Time_Hours>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Left Side Sleep Time PercentTST</span>
-                    <input type=text class=form-control name=Left_Side_Sleep_Time_PercentTST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Right Side Sleep Time</span>
-                    <input type=text class=form-control name=Right_Side_Sleep_Time>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Right Side Sleep Time Minutes</span>
-                    <input type=text class=form-control name=Right_Side_Sleep_Time_Minutes>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Right Side Sleep Time Hours</span>
-                    <input type=text class=form-control name=Right_Side_Sleep_Time_Hours>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Right Side Sleep Time PercentTST</span>
-                    <input type=text class=form-control name=Right_Side_Sleep_Time_PercentTST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Upright Sleep Time</span>
-                    <input type=text class=form-control name=Upright_Sleep_Time>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Upright Sleep Time Minutes</span>
-                    <input type=text class=form-control name=Upright_Sleep_Time_Minutes>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Upright Sleep Time Hours</span>
-                    <input type=text class=form-control name=Upright_Sleep_Time_Hours>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Upright Sleep Time PercentTST</span>
-                    <input type=text class=form-control name=Upright_Sleep_Time_PercentTST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Non Supine Sleep Time Minutes</span>
-                    <input type=text class=form-control name=Non_Supine_Sleep_Time_Minutes>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>Non Supine Sleep Time PercentTST</span>
-                    <input type=text class=form-control name=Non_Supine_Sleep_Time_PercentTST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>PLM Count TST</span>
-                    <input type=text class=form-control name=PLM_Count_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>PLM Duration TST</span>
-                    <input type=text class=form-control name=PLM_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>PLM Mean Duration TST</span>
-                    <input type=text class=form-control name=PLM_Mean_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>PLM Max Duration TST</span>
-                    <input type=text class=form-control name=PLM_Max_Duration_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>PLM Percentage TST</span>
-                    <input type=text class=form-control name=PLM_Percentage_TST>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>LimbMovementCount TIB</span>
-                    <input type=text class=form-control name=LimbMovementCount_TIB>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>LimbMovementCount Supine</span>
-                    <input type=text class=form-control name=LimbMovementCount_Supine>
-                </div></div>
-                <div class='row row__ID'><div class='col'>
-                    <span>LimbMovementCount Non Supine</span>
-                    <input type=text class=form-control name=LimbMovementCount_Non_Supine>
-                </div></div>
-                            
+                    <span>PLM Series Index TST</span>
+                    <input type=text class=form-control name=PLM_Series_Index_TST>
+                </div></div>            
                 <!---------------------------------------------------->
 
-
-                <!-- submit button part for all tsak forms------------>
-                <br>
-    			<div class='row'>
-    				<div class=col>
-    					<button id='submit__ID' type='submit' class='btn btn-secondary'>Submit</button>
-    				</div>
-    			</div>
-                <!---------------------------------------------------->
         	</div>
         </form>
     </section>
@@ -1233,326 +940,78 @@
     <script>
         function F__ID(){
             //-------------------------------------
-			VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:'__COMPONENT__/f/form.01.js'
             VmInclude:'__CURRENT_PATH__/../../s/shared-task-form.js'
             //-------------------------------------
-            $('#F__ID input[name=PSG_File_Name]').on('change',function(evt){
+
+            $('#F__ID input[name=File_Name]').on('change',function(evt){
                 if(this.files.length==1){
                     file_process(this.files[0])
                 }
-            })
+            });
+
+            function parseVariableName(str) {
+                if (str == undefined) { return }
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim();                   // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, '');   // String cannot start with numbers
+                str = str.split(' ').join('_');     // Join any remaining bits of string with underscores
+                return str;
+            }
+
             //-------------------------------------
+            // File reader function
             var file_process = function (file) {
+                // Create a new file reader and on loading a file -> run
                 var reader = new FileReader();
                 reader.onload = (function (e) {
+                    
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = false;
+                    var delimiter  = '=';
+                    
+                    // Get contents
                     var contents = e.target.result;
-                    var lines = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
-                    for (i = 0; i < lines.length; i++) {
-                        var row = lines[i].split(/=/);
-                        $('#F__ID input[name="'+row[0]+'"]').val(row[1]);
-                        
-                        console.log(row[0].trim() +" --- "+row[1])
-                        switch (row[0].trim()) {
-                            case 'Date of Birth': $('#F__ID input[name="DOB"]').val(row[1]); break;
-                            case 'Study_Date': $('#F__ID input[name="Study_Date"]').val(row[1]); break; 
-                            case 'Study Start Time': records[I]['Study_Start_Time'] = row[1]; td.parent().find("td[data-id='Study_Start_Time']").html(row[1]); break;
-                            /*
-                            case 'Study End Time': records[I]['Study_End_Time'] = row[1]; td.parent().find("td[data-id='Study_End_Time']").html(row[1]); break;
-                            case 'Time in Bed (min)': records[I]['Time_in_Bed_min'] = row[1]; td.parent().find("td[data-id='Time_in_Bed_min']").html(row[1]); break;
-                            case 'Sleep Latency (min)': records[I]['Sleep_Latency_min'] = row[1]; td.parent().find("td[data-id='Sleep_Latency_min']").html(row[1]); break;
-                            case 'REM Latency (min)': records[I]['REM_Latency_min'] = row[1]; td.parent().find("td[data-id='REM_Latency_min']").html(row[1]); break;
-                            case 'Sleep Efficiency (%)': records[I]['Sleep_Efficiency_Percent'] = row[1]; td.parent().find("td[data-id='Sleep_Efficiency_Percent']").html(row[1]); break;
-                            case 'Total Time Awake During Sleep Period (min)': records[I]['Total_Time_Awake_During_Sleep_Period_min'] = row[1]; td.parent().find("td[data-id='Total_Time_Awake_During_Sleep_Period_min']").html(row[1]); break;
-                            case 'Total Sleep Time (min)': records[I]['Total_Sleep_Time_min'] = row[1]; td.parent().find("td[data-id='Total_Sleep_Time_min']").html(row[1]); break;
-                            case 'NREM (min)': records[I]['NREM_min'] = row[1]; td.parent().find("td[data-id='NREM_min']").html(row[1]); break;
-                            case 'NREM %': records[I]['NREM_Percent'] = row[1]; td.parent().find("td[data-id='NREM_Percent']").html(row[1]); break;
-                            case 'REM (min)': records[I]['REM_min'] = row[1]; td.parent().find("td[data-id='REM_min']").html(row[1]); break;
-                            case 'REM %': records[I]['REM_Percent'] = row[1]; td.parent().find("td[data-id='REM_Percent']").html(row[1]); break;
-                            case 'Stage 1 (min)': records[I]['Stage_1_min'] = row[1]; td.parent().find("td[data-id='Stage_1_min']").html(row[1]); break;
-                            case 'Stage 1 %': records[I]['Stage_1_Percent'] = row[1]; td.parent().find("td[data-id='Stage_1_Percent']").html(row[1]); break;
-                            case 'Stage 2 (min)': records[I]['Stage_2_min'] = row[1]; td.parent().find("td[data-id='Stage_2_min']").html(row[1]); break;
-                            case 'Stage 2 %': records[I]['Stage_2_Percent'] = row[1]; td.parent().find("td[data-id='Stage_2_Percent']").html(row[1]); break;
-                            case 'Stage 3 (min)': records[I]['Stage_3_min'] = row[1]; td.parent().find("td[data-id='Stage_3_min']").html(row[1]); break;
-                            case 'Stage 3 %': records[I]['Stage_3_Percent'] = row[1]; td.parent().find("td[data-id='Stage_3_Percent']").html(row[1]); break;
-                            case 'Stage 4 (min)': records[I]['Stage_4_min'] = row[1]; td.parent().find("td[data-id='Stage_4_min']").html(row[1]); break;
-                            case 'Stage 4 %': records[I]['Stage_4_Percent'] = row[1]; td.parent().find("td[data-id='Stage_4_Percent']").html(row[1]); break;
-                            case 'Total Arousal Count (TST)': records[I]['Total_Arousal_Count_TST'] = row[1]; td.parent().find("td[data-id='Total_Arousal_Count_TST']").html(row[1]); break;
-                            case 'Total Arousal Count (REM)': records[I]['Total_Arousal_Count_REM'] = row[1]; td.parent().find("td[data-id='Total_Arousal_Count_REM']").html(row[1]); break;
-                            case 'Total Arousal Count (NREM)': records[I]['Total_Arousal_Count_NREM'] = row[1]; td.parent().find("td[data-id='Total_Arousal_Count_NREM']").html(row[1]); break;
-                            case 'Total Arousals Index (TST)': records[I]['Total_Arousals_Index_TST'] = row[1]; td.parent().find("td[data-id='Total_Arousals_Index_TST']").html(row[1]); break;
-                            case 'Total Arousals Index (REM)': records[I]['Total_Arousals_Index_REM'] = row[1]; td.parent().find("td[data-id='Total_Arousals_Index_REM']").html(row[1]); break;
-                            case 'Total Arousals Index (NREM)': records[I]['Total_Arousals_Index_NREM'] = row[1]; td.parent().find("td[data-id='Total_Arousals_Index_NREM']").html(row[1]); break;
-                            case 'Respiratory Arousal Count (TST)': records[I]['Respiratory_Arousal_Count_TST'] = row[1]; td.parent().find("td[data-id='Respiratory_Arousal_Count_TST']").html(row[1]); break;
-                            case 'Respiratory Arousal Count (REM)': records[I]['Respiratory_Arousal_Count_REM'] = row[1]; td.parent().find("td[data-id='Respiratory_Arousal_Count_REM']").html(row[1]); break;
-                            case 'Respiratory Arousal Count (NREM)': records[I]['Respiratory_Arousal_Count_NREM'] = row[1]; td.parent().find("td[data-id='Respiratory_Arousal_Count_NREM']").html(row[1]); break;
-                            case 'Respiratory Arousals Index (TST)': records[I]['Respiratory_Arousals_Index_TST'] = row[1]; td.parent().find("td[data-id='Respiratory_Arousals_Index_TST']").html(row[1]); break;
-                            case 'Respiratory Arousals Index (REM)': records[I]['Respiratory_Arousals_Index_REM'] = row[1]; td.parent().find("td[data-id='Respiratory_Arousals_Index_REM']").html(row[1]); break;
-                            case 'Respiratory Arousals Index (NREM)': records[I]['Respiratory_Arousals_Index_NREM'] = row[1]; td.parent().find("td[data-id='Respiratory_Arousals_Index_NREM']").html(row[1]); break;
-                            case 'Spontaneous Arousal Count (TST)': records[I]['Spontaneous_Arousal_Count_TST'] = row[1]; td.parent().find("td[data-id='Spontaneous_Arousal_Count_TST']").html(row[1]); break;
-                            case 'Spontaneous Arousal Count (REM)': records[I]['Spontaneous_Arousal_Count_REM'] = row[1]; td.parent().find("td[data-id='Spontaneous_Arousal_Count_REM']").html(row[1]); break;
-                            case 'Spontaneous Arousal Count (NREM)': records[I]['Spontaneous_Arousal_Count_NREM'] = row[1]; td.parent().find("td[data-id='Spontaneous_Arousal_Count_NREM']").html(row[1]); break;
-                            case 'Spontaneous Arousals Index (TST)': records[I]['Spontaneous_Arousals_Index_TST'] = row[1]; td.parent().find("td[data-id='Spontaneous_Arousals_Index_TST']").html(row[1]); break;
-                            case 'Spontaneous Arousals Index (REM)': records[I]['Spontaneous_Arousals_Index_REM'] = row[1]; td.parent().find("td[data-id='Spontaneous_Arousals_Index_REM']").html(row[1]); break;
-                            case 'Spontaneous Arousals Index (NREM)': records[I]['Spontaneous_Arousals_Index_NREM'] = row[1]; td.parent().find("td[data-id='Spontaneous_Arousals_Index_NREM']").html(row[1]); break;
-                            case 'Limb Movement Arousal Count (TST)': records[I]['Limb_Movement_Arousal_Count_TST'] = row[1]; td.parent().find("td[data-id='Limb_Movement_Arousal_Count_TST']").html(row[1]); break;
-                            case 'Limb Movement Arousal Count (REM)': records[I]['Limb_Movement_Arousal_Count_REM'] = row[1]; td.parent().find("td[data-id='Limb_Movement_Arousal_Count_REM']").html(row[1]); break;
-                            case 'Limb Movement Arousal Count (NREM)': records[I]['Limb_Movement_Arousal_Count_NREM'] = row[1]; td.parent().find("td[data-id='Limb_Movement_Arousal_Count_NREM']").html(row[1]); break;
-                            case 'Limb Movement Arousals Index (TST)': records[I]['Limb_Movement_Arousals_Index_TST'] = row[1]; td.parent().find("td[data-id='Limb_Movement_Arousals_Index_TST']").html(row[1]); break;
-                            case 'Limb Movement Arousals Index (REM)': records[I]['Limb_Movement_Arousals_Index_REM'] = row[1]; td.parent().find("td[data-id='Limb_Movement_Arousals_Index_REM']").html(row[1]); break;
-                            case 'Limb Movement Arousals Index (NREM)': records[I]['Limb_Movement_Arousals_Index_NREM'] = row[1]; td.parent().find("td[data-id='Limb_Movement_Arousals_Index_NREM']").html(row[1]); break;
-                            case 'Total Apnea Count (TST)': records[I]['Total_Apnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Count_TST']").html(row[1]); break;
-                            case 'Total Apnea Count (REM)': records[I]['Total_Apnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Count_REM']").html(row[1]); break;
-                            case 'Total Apnea Count (NREM)': records[I]['Total_Apnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Count_NREM']").html(row[1]); break;
-                            case 'Total Apnea Index (TST)': records[I]['Total_Apnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Index_TST']").html(row[1]); break;
-                            case 'Total Apnea Index (REM)': records[I]['Total_Apnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Index_REM']").html(row[1]); break;
-                            case 'Total Apnea Index (NREM)': records[I]['Total_Apnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Index_NREM']").html(row[1]); break;
-                            case 'Mean Apnea Duration (TST)': records[I]['Mean_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Apnea Duration (TST)': records[I]['Max_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Central Apnea Count (TST)': records[I]['Central_Apnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_TST']").html(row[1]); break;
-                            case 'Central Apnea Count (REM)': records[I]['Central_Apnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_REM']").html(row[1]); break;
-                            case 'Central Apnea Count (NREM)': records[I]['Central_Apnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_NREM']").html(row[1]); break;
-                            case 'Central Apnea Count (Supine)': records[I]['Central_Apnea_Count_Supine'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Supine']").html(row[1]); break;
-                            case 'Central Apnea Count (Prone)': records[I]['Central_Apnea_Count_Prone'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Prone']").html(row[1]); break;
-                            case 'Central Apnea Count (Left Side)': records[I]['Central_Apnea_Count_Left_Side'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Left_Side']").html(row[1]); break;
-                            case 'Central Apnea Count (Right Side)': records[I]['Central_Apnea_Count_Right_Side'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Right_Side']").html(row[1]); break;
-                            case 'Central Apnea Index (TST)': records[I]['Central_Apnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_TST']").html(row[1]); break;
-                            case 'Central Apnea Index (REM)': records[I]['Central_Apnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_REM']").html(row[1]); break;
-                            case 'Central Apnea Index (NREM)': records[I]['Central_Apnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_NREM']").html(row[1]); break;
-                            case 'Central Apnea Index (Supine)': records[I]['Central_Apnea_Index_Supine'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Supine']").html(row[1]); break;
-                            case 'Central Apnea Index (Prone)': records[I]['Central_Apnea_Index_Prone'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Prone']").html(row[1]); break;
-                            case 'Central Apnea Index (Left Side)': records[I]['Central_Apnea_Index_Left_Side'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Left_Side']").html(row[1]); break;
-                            case 'Central Apnea Index (Right Side)': records[I]['Central_Apnea_Index_Right_Side'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Right_Side']").html(row[1]); break;
-                            case 'Mean Central Apnea Duration (TST)': records[I]['Mean_Central_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Central_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Central Apnea Duration (TST)': records[I]['Max_Central_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Central_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (TST)': records[I]['Obstructive_Apnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_TST']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (REM)': records[I]['Obstructive_Apnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_REM']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (NREM)': records[I]['Obstructive_Apnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_NREM']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Supine)': records[I]['Obstructive_Apnea_Count_Supine'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Supine']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Prone)': records[I]['Obstructive_Apnea_Count_Prone'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Prone']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Left Side)': records[I]['Obstructive_Apnea_Count_Left_Side'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Left_Side']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Right Side)': records[I]['Obstructive_Apnea_Count_Right_Side'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Right_Side']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (TST)': records[I]['Obstructive_Apnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_TST']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (REM)': records[I]['Obstructive_Apnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_REM']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (NREM)': records[I]['Obstructive_Apnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_NREM']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Supine)': records[I]['Obstructive_Apnea_Index_Supine'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Supine']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Prone)': records[I]['Obstructive_Apnea_Index_Prone'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Prone']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Left Side)': records[I]['Obstructive_Apnea_Index_Left_Side'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Left_Side']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Right Side)': records[I]['Obstructive_Apnea_Index_Right_Side'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Right_Side']").html(row[1]); break;
-                            case 'Mean Obstructive Apnea Duration (TST)': records[I]['Mean_Obstructive_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Obstructive_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Obstructive Apnea Duration (TST)': records[I]['Max_Obstructive_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Obstructive_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Mixed Apnea Count (TST)': records[I]['Mixed_Apnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_TST']").html(row[1]); break;
-                            case 'Mixed Apnea Count (REM)': records[I]['Mixed_Apnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_REM']").html(row[1]); break;
-                            case 'Mixed Apnea Count (NREM)': records[I]['Mixed_Apnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_NREM']").html(row[1]); break;
-                            case 'Mixed Apnea Count (Supine)': records[I]['Mixed_Apnea_Count_Supine'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_Supine']").html(row[1]); break;
-                            case 'Mixed Apnea Count (Prone)': records[I]['Mixed_Apnea_Count_Prone'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_Prone']").html(row[1]); break;
-                            case 'Mixed Apnea Count (Left Side)': records[I]['Mixed_Apnea_Count_Left_Side'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_Left_Side']").html(row[1]); break;
-                            case 'Mixed Apnea Count (Right Side)': records[I]['Mixed_Apnea_Count_Right_Side'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Count_Right_Side']").html(row[1]); break;
-                            case 'Mixed Apnea Index (TST)': records[I]['Mixed_Apnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_TST']").html(row[1]); break;
-                            case 'Mixed Apnea Index (REM)': records[I]['Mixed_Apnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_REM']").html(row[1]); break;
-                            case 'Mixed Apnea Index (NREM)': records[I]['Mixed_Apnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_NREM']").html(row[1]); break;
-                            case 'Mixed Apnea Index (Supine)': records[I]['Mixed_Apnea_Index_Supine'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_Supine']").html(row[1]); break;
-                            case 'Mixed Apnea Index (Prone)': records[I]['Mixed_Apnea_Index_Prone'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_Prone']").html(row[1]); break;
-                            case 'Mixed Apnea Index (Left Side)': records[I]['Mixed_Apnea_Index_Left_Side'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_Left_Side']").html(row[1]); break;
-                            case 'Mixed Apnea Index (Right Side)': records[I]['Mixed_Apnea_Index_Right_Side'] = row[1]; td.parent().find("td[data-id='Mixed_Apnea_Index_Right_Side']").html(row[1]); break;
-                            case 'Mean Mixed Apnea Duration (TST)': records[I]['Mean_Mixed_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Mixed_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Mixed Apnea Duration (TST)': records[I]['Max_Mixed_Apnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Mixed_Apnea_Duration_TST']").html(row[1]); break;
-                            case 'Total Hypopnea Count (TST)': records[I]['Total_Hypopnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_TST']").html(row[1]); break;
-                            case 'Total Hypopnea Count (REM)': records[I]['Total_Hypopnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_REM']").html(row[1]); break;
-                            case 'Total Hypopnea Count (NREM)': records[I]['Total_Hypopnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_NREM']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Supine)': records[I]['Total_Hypopnea_Count_Supine'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Supine']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Prone)': records[I]['Total_Hypopnea_Count_Prone'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Prone']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Left Side)': records[I]['Total_Hypopnea_Count_Left_Side'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Left_Side']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Right Side)': records[I]['Total_Hypopnea_Count_Right_Side'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Right_Side']").html(row[1]); break;
-                            case 'Total Hypopnea Index (TST)': records[I]['Total_Hypopnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_TST']").html(row[1]); break;
-                            case 'Total Hypopnea Index (REM)': records[I]['Total_Hypopnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_REM']").html(row[1]); break;
-                            case 'Total Hypopnea Index (NREM)': records[I]['Total_Hypopnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_NREM']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Supine)': records[I]['Total_Hypopnea_Index_Supine'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Supine']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Prone)': records[I]['Total_Hypopnea_Index_Prone'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Prone']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Left Side)': records[I]['Total_Hypopnea_Index_Left_Side'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Left_Side']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Right Side)': records[I]['Total_Hypopnea_Index_Right_Side'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Right_Side']").html(row[1]); break;
-                            case 'Mean Hypopnea Duration (TST)': records[I]['Mean_Hypopnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Hypopnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Hypopnea Duration (TST)': records[I]['Max_Hypopnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Hypopnea_Duration_TST']").html(row[1]); break;
-                            case 'Central Hypopnea Count (TST)': records[I]['Central_Hypopnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Central_Hypopnea_Count_TST']").html(row[1]); break;
-                            case 'Central Hypopnea Count (REM)': records[I]['Central_Hypopnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Central_Hypopnea_Count_REM']").html(row[1]); break;
-                            case 'Central Hypopnea Count (NREM)': records[I]['Central_Hypopnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Central_Hypopnea_Count_NREM']").html(row[1]); break;
-                            case 'Central Hypopnea Index (TST)': records[I]['Central_Hypopnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Central_Hypopnea_Index_TST']").html(row[1]); break;
-                            case 'Central Hypopnea Index (REM)': records[I]['Central_Hypopnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Central_Hypopnea_Index_REM']").html(row[1]); break;
-                            case 'Central Hypopnea Index (NREM)': records[I]['Central_Hypopnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Central_Hypopnea_Index_NREM']").html(row[1]); break;
-                            case 'Mean Central Hypopnea Duration (TST)': records[I]['Mean_Central_Hypopnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Central_Hypopnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Central Hypopnea Duration (TST)': records[I]['Max_Central_Hypopnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Central_Hypopnea_Duration_TST']").html(row[1]); break;
-                            case 'Obstructive Hypopnea Count (TST)': records[I]['Obstructive_Hypopnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Obstructive_Hypopnea_Count_TST']").html(row[1]); break;
-                            case 'Obstructive Hypopnea Count (REM)': records[I]['Obstructive_Hypopnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Obstructive_Hypopnea_Count_REM']").html(row[1]); break;
-                            case 'Obstructive Hypopnea Count (NREM)': records[I]['Obstructive_Hypopnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Obstructive_Hypopnea_Count_NREM']").html(row[1]); break;
-                            case 'Obstructive Hypopnea Index (TST)': records[I]['Obstructive_Hypopnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Obstructive_Hypopnea_Index_TST']").html(row[1]); break;
-                            case 'Obstructive Hypopnea Index (REM)': records[I]['Obstructive_Hypopnea_Index_REM'] = row[1]; td.parent().find("td[data-id='Obstructive_Hypopnea_Index_REM']").html(row[1]); break;
-                            case 'Obstructive Hypopnea Index (NREM)': records[I]['Obstructive_Hypopnea_Index_NREM'] = row[1]; td.parent().find("td[data-id='Obstructive_Hypopnea_Index_NREM']").html(row[1]); break;
-                            case 'Mean Obstructive Hypopnea Duration (TST)': records[I]['Mean_Obstructive_Hypopnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Mean_Obstructive_Hypopnea_Duration_TST']").html(row[1]); break;
-                            case 'Max Obstructive Hypopnea Duration (TST)': records[I]['Max_Obstructive_Hypopnea_Duration_TST'] = row[1]; td.parent().find("td[data-id='Max_Obstructive_Hypopnea_Duration_TST']").html(row[1]); break;
-                            case 'Apnea Hypopnea Count (TST)': records[I]['Apnea_Hypopnea_Count_TST'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Count_TST']").html(row[1]); break;
-                            case 'Apnea Hypopnea Index (TST)': records[I]['Apnea_Hypopnea_Index_TST'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Index_TST']").html(row[1]); break;
-                            case 'Apnea Hypopnea Count (REM)': records[I]['Apnea_Hypopnea_Count_REM'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Count_REM']").html(row[1]); break;
-                            case 'Apnea Hypopnea Count (NREM)': records[I]['Apnea_Hypopnea_Count_NREM'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Count_NREM']").html(row[1]); break;
-                            case 'Total Respiratory Count (REM)': records[I]['Total_Respiratory_Count_REM'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_REM']").html(row[1]); break;
-                            case 'Total Respiratory Count (NREM)': records[I]['Total_Respiratory_Count_NREM'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_NREM']").html(row[1]); break;
-                            case 'Total Respiratory Count (Supine)': records[I]['Total_Respiratory_Count_Supine'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Supine']").html(row[1]); break;
-                            case 'Total Respiratory Count (Prone)': records[I]['Total_Respiratory_Count_Prone'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Prone']").html(row[1]); break;
-                            case 'Total Respiratory Count (Left Side)': records[I]['Total_Respiratory_Count_Left_Side'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Left_Side']").html(row[1]); break;
-                            case 'Total Respiratory Count (Right Side)': records[I]['Total_Respiratory_Count_Right_Side'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Right_Side']").html(row[1]); break;
-                            case 'Total Respiratory Index (REM)': records[I]['Total_Respiratory_Index_REM'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_REM']").html(row[1]); break;
-                            case 'Total Respiratory Index (NREM)': records[I]['Total_Respiratory_Index_NREM'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_NREM']").html(row[1]); break;
-                            case 'Total Respiratory Index (Supine)': records[I]['Total_Respiratory_Index_Supine'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Supine']").html(row[1]); break;
-                            case 'Total Respiratory Index (Prone)': records[I]['Total_Respiratory_Index_Prone'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Prone']").html(row[1]); break;
-                            case 'Total Respiratory Index (Left Side)': records[I]['Total_Respiratory_Index_Left_Side'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Left_Side']").html(row[1]); break;
-                            case 'Total Respiratory Index (Right Side)': records[I]['Total_Respiratory_Index_Right_Side'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Right_Side']").html(row[1]); break;
-                            case 'Total Apnea Count (TST w/ Desat)': records[I]['Total_Apnea_Count_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Count_TST_w_Desat']").html(row[1]); break;
-                            case 'Total Apnea Count (REM w/ Desat)': records[I]['Total_Apnea_Count_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Count_REM_w_Desat']").html(row[1]); break;
-                            case 'Total Apnea Count (NREM w/ Desat)': records[I]['Total_Apnea_Count_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Count_NREM_w_Desat']").html(row[1]); break;
-                            case 'Total Apnea Index (TST w/ Desat)': records[I]['Total_Apnea_Index_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Index_TST_w_Desat']").html(row[1]); break;
-                            case 'Total Apnea Index (REM w/ Desat)': records[I]['Total_Apnea_Index_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Index_REM_w_Desat']").html(row[1]); break;
-                            case 'Total Apnea Index (NREM w/ Desat)': records[I]['Total_Apnea_Index_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Apnea_Index_NREM_w_Desat']").html(row[1]); break;
-                            case 'Mean Apnea Duration (TST w/ Desat)': records[I]['Mean_Apnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Mean_Apnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Max Apnea Duration (TST w/ Desat)': records[I]['Max_Apnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Max_Apnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (TST w/ Desat)': records[I]['Central_Apnea_Count_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_TST_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (REM w/ Desat)': records[I]['Central_Apnea_Count_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_REM_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (NREM w/ Desat)': records[I]['Central_Apnea_Count_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_NREM_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (Supine w/ Desat)': records[I]['Central_Apnea_Count_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Supine_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (Prone w/ Desat)': records[I]['Central_Apnea_Count_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Prone_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (Left Side w/ Desat)': records[I]['Central_Apnea_Count_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Count (Right Side w/ Desat)': records[I]['Central_Apnea_Count_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Count_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (TST w/ Desat)': records[I]['Central_Apnea_Index_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_TST_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (REM w/ Desat)': records[I]['Central_Apnea_Index_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_REM_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (NREM w/ Desat)': records[I]['Central_Apnea_Index_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_NREM_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (Supine w/ Desat)': records[I]['Central_Apnea_Index_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Supine_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (Prone w/ Desat)': records[I]['Central_Apnea_Index_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Prone_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (Left Side w/ Desat)': records[I]['Central_Apnea_Index_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Central Apnea Index (Right Side w/ Desat)': records[I]['Central_Apnea_Index_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Central_Apnea_Index_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Mean Central Apnea Duration (TST w/ Desat)': records[I]['Mean_Central_Apnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Mean_Central_Apnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Max Central Apnea Duration (TST w/ Desat)': records[I]['Max_Central_Apnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Max_Central_Apnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (TST w/ Desat)': records[I]['Obstructive_Apnea_Count_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_TST_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (REM w/ Desat)': records[I]['Obstructive_Apnea_Count_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_REM_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (NREM w/ Desat)': records[I]['Obstructive_Apnea_Count_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_NREM_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Supine w/ Desat)': records[I]['Obstructive_Apnea_Count_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Supine_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Prone w/ Desat)': records[I]['Obstructive_Apnea_Count_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Prone_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Left Side w/ Desat)': records[I]['Obstructive_Apnea_Count_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Count (Right Side w/ Desat)': records[I]['Obstructive_Apnea_Count_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Count_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (TST w/ Desat)': records[I]['Obstructive_Apnea_Index_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_TST_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (REM w/ Desat)': records[I]['Obstructive_Apnea_Index_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_REM_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (NREM w/ Desat)': records[I]['Obstructive_Apnea_Index_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_NREM_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Supine w/ Desat)': records[I]['Obstructive_Apnea_Index_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Supine_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Prone w/ Desat)': records[I]['Obstructive_Apnea_Index_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Prone_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Left Side w/ Desat)': records[I]['Obstructive_Apnea_Index_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Obstructive Apnea Index (Right Side w/ Desat)': records[I]['Obstructive_Apnea_Index_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Obstructive_Apnea_Index_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Mean Obstructive Apnea Duration (TST w/ Desat)': records[I]['Mean_Obstructive_Apnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Mean_Obstructive_Apnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Max Obstructive Apnea Duration (TST w/ Desat)': records[I]['Max_Obstructive_Apnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Max_Obstructive_Apnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (TST w/ Desat)': records[I]['Total_Hypopnea_Count_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_TST_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (REM w/ Desat)': records[I]['Total_Hypopnea_Count_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_REM_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (NREM w/ Desat)': records[I]['Total_Hypopnea_Count_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_NREM_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Supine w/ Desat)': records[I]['Total_Hypopnea_Count_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Supine_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Prone w/ Desat)': records[I]['Total_Hypopnea_Count_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Prone_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Left Side w/ Desat)': records[I]['Total_Hypopnea_Count_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Count (Right Side w/ Desat)': records[I]['Total_Hypopnea_Count_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Count_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (TST w/ Desat)': records[I]['Total_Hypopnea_Index_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_TST_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (REM w/ Desat)': records[I]['Total_Hypopnea_Index_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_REM_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (NREM w/ Desat)': records[I]['Total_Hypopnea_Index_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_NREM_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Supine w/ Desat)': records[I]['Total_Hypopnea_Index_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Supine_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Prone w/ Desat)': records[I]['Total_Hypopnea_Index_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Prone_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Left Side w/ Desat)': records[I]['Total_Hypopnea_Index_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Total Hypopnea Index (Right Side w/ Desat)': records[I]['Total_Hypopnea_Index_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Hypopnea_Index_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Mean Hypopnea Duration (TST w/ Desat)': records[I]['Mean_Hypopnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Mean_Hypopnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Max Hypopnea Duration (TST w/ Desat)': records[I]['Max_Hypopnea_Duration_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Max_Hypopnea_Duration_TST_w_Desat']").html(row[1]); break;
-                            case 'Apnea Hypopnea Count (TST w/ Desat)': records[I]['Apnea_Hypopnea_Count_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Count_TST_w_Desat']").html(row[1]); break;
-                            case 'Apnea Hypopnea Index (TST w/ Desat)': records[I]['Apnea_Hypopnea_Index_TST_w_Desat'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Index_TST_w_Desat']").html(row[1]); break;
-                            case 'Apnea Hypopnea Count (REM w/ Desat)': records[I]['Apnea_Hypopnea_Count_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Count_REM_w_Desat']").html(row[1]); break;
-                            case 'Apnea Hypopnea Count (NREM w/ Desat)': records[I]['Apnea_Hypopnea_Count_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Apnea_Hypopnea_Count_NREM_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Count (REM w/ Desat)': records[I]['Total_Respiratory_Count_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_REM_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Count (NREM w/ Desat)': records[I]['Total_Respiratory_Count_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_NREM_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Count (Supine w/ Desat)': records[I]['Total_Respiratory_Count_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Supine_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Count (Prone w/ Desat)': records[I]['Total_Respiratory_Count_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Prone_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Count (Left Side w/ Desat)': records[I]['Total_Respiratory_Count_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Count (Right Side w/ Desat)': records[I]['Total_Respiratory_Count_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Count_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Index (REM w/ Desat)': records[I]['Total_Respiratory_Index_REM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_REM_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Index (NREM w/ Desat)': records[I]['Total_Respiratory_Index_NREM_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_NREM_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Index (Supine w/ Desat)': records[I]['Total_Respiratory_Index_Supine_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Supine_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Index (Prone w/ Desat)': records[I]['Total_Respiratory_Index_Prone_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Prone_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Index (Left Side w/ Desat)': records[I]['Total_Respiratory_Index_Left_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Left_Side_w_Desat']").html(row[1]); break;
-                            case 'Total Respiratory Index (Right Side w/ Desat)': records[I]['Total_Respiratory_Index_Right_Side_w_Desat'] = row[1]; td.parent().find("td[data-id='Total_Respiratory_Index_Right_Side_w_Desat']").html(row[1]); break;
-                            case 'Desat Event Count (WASO)': records[I]['Desat_Event_Count_WASO'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_WASO']").html(row[1]); break;
-                            case 'Desat Event Count (TST)': records[I]['Desat_Event_Count_TST'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_TST']").html(row[1]); break;
-                            case 'Desat Event Count (REM)': records[I]['Desat_Event_Count_REM'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_REM']").html(row[1]); break;
-                            case 'Desat Event Count (NREM)': records[I]['Desat_Event_Count_NREM'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_NREM']").html(row[1]); break;
-                            case 'Desat Event Index (WASO)': records[I]['Desat_Event_Index_WASO'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_WASO']").html(row[1]); break;
-                            case 'Desat Event Index (TST)': records[I]['Desat_Event_Index_TST'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_TST']").html(row[1]); break;
-                            case 'Desat Event Index (REM)': records[I]['Desat_Event_Index_REM'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_REM']").html(row[1]); break;
-                            case 'Desat Event Index (NREM)': records[I]['Desat_Event_Index_NREM'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_NREM']").html(row[1]); break;
-                            case 'Mean Desaturation Duration (TST seconds)': records[I]['Mean_Desaturation_Duration_TST_seconds'] = row[1]; td.parent().find("td[data-id='Mean_Desaturation_Duration_TST_seconds']").html(row[1]); break;
-                            case 'Mean Desaturation Duration (REM seconds)': records[I]['Mean_Desaturation_Duration_REM_seconds'] = row[1]; td.parent().find("td[data-id='Mean_Desaturation_Duration_REM_seconds']").html(row[1]); break;
-                            case 'Mean Desaturation Duration (Non REM seconds)': records[I]['Mean_Desaturation_Duration_Non_REM_seconds'] = row[1]; td.parent().find("td[data-id='Mean_Desaturation_Duration_Non_REM_seconds']").html(row[1]); break;
-                            case 'Desat Event Count (TIB)': records[I]['Desat_Event_Count_TIB'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_TIB']").html(row[1]); break;
-                            case 'Desat Event Count (Supine)': records[I]['Desat_Event_Count_Supine'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_Supine']").html(row[1]); break;
-                            case 'Desat Event Count (NonSupine)': records[I]['Desat_Event_Count_NonSupine'] = row[1]; td.parent().find("td[data-id='Desat_Event_Count_NonSupine']").html(row[1]); break;
-                            case 'Desat Event Index (TIB)': records[I]['Desat_Event_Index_TIB'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_TIB']").html(row[1]); break;
-                            case 'Desat Event Index (Supine)': records[I]['Desat_Event_Index_Supine'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_Supine']").html(row[1]); break;
-                            case 'Desat Event Index (NonSupine)': records[I]['Desat_Event_Index_NonSupine'] = row[1]; td.parent().find("td[data-id='Desat_Event_Index_NonSupine']").html(row[1]); break;
-                            case 'Mean SaO2% (Supine)': records[I]['Mean_SaO2Percent_Supine'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_Supine']").html(row[1]); break;
-                            case 'Mean SaO2% (Non Supine)': records[I]['Mean_SaO2Percent_Non_Supine'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_Non_Supine']").html(row[1]); break;
-                            case 'SaO2 Percentage In Range 90 to 100 (TIB)': records[I]['SaO2_Percentage_In_Range_90_to_100_TIB'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_In_Range_90_to_100_TIB']").html(row[1]); break;
-                            case 'SaO2 Percentage In Range 80 to 89 (TIB)': records[I]['SaO2_Percentage_In_Range_80_to_89_TIB'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_In_Range_80_to_89_TIB']").html(row[1]); break;
-                            case 'SaO2 Percentage In Range 70 to 79 (TIB)': records[I]['SaO2_Percentage_In_Range_70_to_79_TIB'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_In_Range_70_to_79_TIB']").html(row[1]); break;
-                            case 'SaO2 Percentage In Range 60 to 69 (TIB)': records[I]['SaO2_Percentage_In_Range_60_to_69_TIB'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_In_Range_60_to_69_TIB']").html(row[1]); break;
-                            case 'SaO2 Percentage In Range 50 to 59 (TIB)': records[I]['SaO2_Percentage_In_Range_50_to_59_TIB'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_In_Range_50_to_59_TIB']").html(row[1]); break;
-                            case 'SaO2 Percentage Below 50 (Wake)': records[I]['SaO2_Percentage_Below_50_Wake'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_Below_50_Wake']").html(row[1]); break;
-                            case 'SaO2 Percentage Below 50 (TIB)': records[I]['SaO2_Percentage_Below_50_TIB'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_Below_50_TIB']").html(row[1]); break;
-                            case 'SaO2 Percentage Below 50 (TST)': records[I]['SaO2_Percentage_Below_50_TST'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_Below_50_TST']").html(row[1]); break;
-                            case 'SaO2 Percentage Below 50 (REM)': records[I]['SaO2_Percentage_Below_50_REM'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_Below_50_REM']").html(row[1]); break;
-                            case 'SaO2 Percentage Below 50 (NREM)': records[I]['SaO2_Percentage_Below_50_NREM'] = row[1]; td.parent().find("td[data-id='SaO2_Percentage_Below_50_NREM']").html(row[1]); break;
-                            case 'Max SaO2% (TIB)': records[I]['Max_SaO2Percent_TIB'] = row[1]; td.parent().find("td[data-id='Max_SaO2Percent_TIB']").html(row[1]); break;
-                            case 'Mean SaO2% (TIB)': records[I]['Mean_SaO2Percent_TIB'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_TIB']").html(row[1]); break;
-                            case 'Min SaO2% (TIB)': records[I]['Min_SaO2Percent_TIB'] = row[1]; td.parent().find("td[data-id='Min_SaO2Percent_TIB']").html(row[1]); break;
-                            case 'Max SaO2% (Wake)': records[I]['Max_SaO2Percent_Wake'] = row[1]; td.parent().find("td[data-id='Max_SaO2Percent_Wake']").html(row[1]); break;
-                            case 'Mean SaO2% (Wake)': records[I]['Mean_SaO2Percent_Wake'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_Wake']").html(row[1]); break;
-                            case 'Min SaO2% (Wake)': records[I]['Min_SaO2Percent_Wake'] = row[1]; td.parent().find("td[data-id='Min_SaO2Percent_Wake']").html(row[1]); break;
-                            case 'Max SaO2% (TST)': records[I]['Max_SaO2Percent_TST'] = row[1]; td.parent().find("td[data-id='Max_SaO2Percent_TST']").html(row[1]); break;
-                            case 'Mean SaO2% (TST)': records[I]['Mean_SaO2Percent_TST'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_TST']").html(row[1]); break;
-                            case 'Min SaO2% (TST)': records[I]['Min_SaO2Percent_TST'] = row[1]; td.parent().find("td[data-id='Min_SaO2Percent_TST']").html(row[1]); break;
-                            case 'Max SaO2% (REM)': records[I]['Max_SaO2Percent_REM'] = row[1]; td.parent().find("td[data-id='Max_SaO2Percent_REM']").html(row[1]); break;
-                            case 'Mean SaO2% (REM)': records[I]['Mean_SaO2Percent_REM'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_REM']").html(row[1]); break;
-                            case 'Min SaO2% (REM)': records[I]['Min_SaO2Percent_REM'] = row[1]; td.parent().find("td[data-id='Min_SaO2Percent_REM']").html(row[1]); break;
-                            case 'Max SaO2% (NREM)': records[I]['Max_SaO2Percent_NREM'] = row[1]; td.parent().find("td[data-id='Max_SaO2Percent_NREM']").html(row[1]); break;
-                            case 'Mean SaO2% (NREM)': records[I]['Mean_SaO2Percent_NREM'] = row[1]; td.parent().find("td[data-id='Mean_SaO2Percent_NREM']").html(row[1]); break;
-                            case 'Min SaO2% (NREM)': records[I]['Min_SaO2Percent_NREM'] = row[1]; td.parent().find("td[data-id='Min_SaO2Percent_NREM']").html(row[1]); break;
-                            case 'Supine Sleep Time': records[I]['Supine_Sleep_Time'] = row[1]; td.parent().find("td[data-id='Supine_Sleep_Time']").html(row[1]); break;
-                            case 'Supine Sleep Time (Minutes)': records[I]['Supine_Sleep_Time_Minutes'] = row[1]; td.parent().find("td[data-id='Supine_Sleep_Time_Minutes']").html(row[1]); break;
-                            case 'Supine Sleep Time (Hours)': records[I]['Supine_Sleep_Time_Hours'] = row[1]; td.parent().find("td[data-id='Supine_Sleep_Time_Hours']").html(row[1]); break;
-                            case 'Supine Sleep Time %TST': records[I]['Supine_Sleep_Time_PercentTST'] = row[1]; td.parent().find("td[data-id='Supine_Sleep_Time_PercentTST']").html(row[1]); break;
-                            case 'Prone Sleep Time': records[I]['Prone_Sleep_Time'] = row[1]; td.parent().find("td[data-id='Prone_Sleep_Time']").html(row[1]); break;
-                            case 'Prone Sleep Time (Minutes)': records[I]['Prone_Sleep_Time_Minutes'] = row[1]; td.parent().find("td[data-id='Prone_Sleep_Time_Minutes']").html(row[1]); break;
-                            case 'Prone Sleep Time (Hours)': records[I]['Prone_Sleep_Time_Hours'] = row[1]; td.parent().find("td[data-id='Prone_Sleep_Time_Hours']").html(row[1]); break;
-                            case 'Prone Sleep Time %TST': records[I]['Prone_Sleep_Time_PercentTST'] = row[1]; td.parent().find("td[data-id='Prone_Sleep_Time_PercentTST']").html(row[1]); break;
-                            case 'Left Side Sleep Time': records[I]['Left_Side_Sleep_Time'] = row[1]; td.parent().find("td[data-id='Left_Side_Sleep_Time']").html(row[1]); break;
-                            case 'Left Side Sleep Time (Minutes)': records[I]['Left_Side_Sleep_Time_Minutes'] = row[1]; td.parent().find("td[data-id='Left_Side_Sleep_Time_Minutes']").html(row[1]); break;
-                            case 'Left Side Sleep Time (Hours)': records[I]['Left_Side_Sleep_Time_Hours'] = row[1]; td.parent().find("td[data-id='Left_Side_Sleep_Time_Hours']").html(row[1]); break;
-                            case 'Left Side Sleep Time %TST': records[I]['Left_Side_Sleep_Time_PercentTST'] = row[1]; td.parent().find("td[data-id='Left_Side_Sleep_Time_PercentTST']").html(row[1]); break;
-                            case 'Right Side Sleep Time': records[I]['Right_Side_Sleep_Time'] = row[1]; td.parent().find("td[data-id='Right_Side_Sleep_Time']").html(row[1]); break;
-                            case 'Right Side Sleep Time (Minutes)': records[I]['Right_Side_Sleep_Time_Minutes'] = row[1]; td.parent().find("td[data-id='Right_Side_Sleep_Time_Minutes']").html(row[1]); break;
-                            case 'Right Side Sleep Time (Hours)': records[I]['Right_Side_Sleep_Time_Hours'] = row[1]; td.parent().find("td[data-id='Right_Side_Sleep_Time_Hours']").html(row[1]); break;
-                            case 'Right Side Sleep Time %TST': records[I]['Right_Side_Sleep_Time_PercentTST'] = row[1]; td.parent().find("td[data-id='Right_Side_Sleep_Time_PercentTST']").html(row[1]); break;
-                            case 'Upright Sleep Time': records[I]['Upright_Sleep_Time'] = row[1]; td.parent().find("td[data-id='Upright_Sleep_Time']").html(row[1]); break;
-                            case 'Upright Sleep Time (Minutes)': records[I]['Upright_Sleep_Time_Minutes'] = row[1]; td.parent().find("td[data-id='Upright_Sleep_Time_Minutes']").html(row[1]); break;
-                            case 'Upright Sleep Time (Hours)': records[I]['Upright_Sleep_Time_Hours'] = row[1]; td.parent().find("td[data-id='Upright_Sleep_Time_Hours']").html(row[1]); break;
-                            case 'Upright Sleep Time %TST': records[I]['Upright_Sleep_Time_PercentTST'] = row[1]; td.parent().find("td[data-id='Upright_Sleep_Time_PercentTST']").html(row[1]); break;
-                            case 'Non-Supine Sleep Time (Minutes)': records[I]['Non_Supine_Sleep_Time_Minutes'] = row[1]; td.parent().find("td[data-id='Non_Supine_Sleep_Time_Minutes']").html(row[1]); break;
-                            case 'Non-Supine Sleep Time %TST': records[I]['Non_Supine_Sleep_Time_PercentTST'] = row[1]; td.parent().find("td[data-id='Non_Supine_Sleep_Time_PercentTST']").html(row[1]); break;
-                            case 'PLM Count TST': records[I]['PLM_Count_TST'] = row[1]; td.parent().find("td[data-id='PLM_Count_TST']").html(row[1]); break;
-                            case 'PLM Duration TST': records[I]['PLM_Duration_TST'] = row[1]; td.parent().find("td[data-id='PLM_Duration_TST']").html(row[1]); break;
-                            case 'PLM Mean Duration TST': records[I]['PLM_Mean_Duration_TST'] = row[1]; td.parent().find("td[data-id='PLM_Mean_Duration_TST']").html(row[1]); break;
-                            case 'PLM Max Duration TST': records[I]['PLM_Max_Duration_TST'] = row[1]; td.parent().find("td[data-id='PLM_Max_Duration_TST']").html(row[1]); break;
-                            case 'PLM Percentage TST': records[I]['PLM_Percentage_TST'] = row[1]; td.parent().find("td[data-id='PLM_Percentage_TST']").html(row[1]); break;
-                            case 'LimbMovementCount (TIB)': records[I]['LimbMovementCount_TIB'] = row[1]; td.parent().find("td[data-id='LimbMovementCount_TIB']").html(row[1]); break;
-                            case 'LimbMovementCount (Supine)': records[I]['LimbMovementCount_Supine'] = row[1]; td.parent().find("td[data-id='LimbMovementCount_Supine']").html(row[1]); break;
-                            case 'LimbMovementCount (Non Supine)': records[I]['LimbMovementCount_Non_Supine'] = row[1]; td.parent().find("td[data-id='LimbMovementCount_Non_Supine']").html(row[1]); break;
-                            */
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = 0; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if ( r == 0 ) {
+                                var varNames = rows[r].split(delimiter);
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // The subsequent rows contains the values
+                                var varValues = rows[r].split(delimiter);
+                            }
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        var varNames  = Array();
+                        var varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            // If it did not find a pair, continue
+                            if (row.length == 1) { continue };
+                            varNames.push(parseVariableName(row[0]));
+                            varValues.push(row[1]);
                         }
                     }
+                    // Store the value of each variable in the form-input field
+                    for (var v = 0; v < varNames.length; v++) {
+                        $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[v]);
+                    }
+                    console.log(varNames.join());
                 });
                 reader.readAsText(file);
             }

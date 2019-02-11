@@ -1,0 +1,253 @@
+Woolcock Research Report (AASM V2.2 criteria) Matt Edit 24 Sept 2018
+Active Date DD/MM/YY
+Authors:
+
+
+CMS Patient ID=
+Date of Birth=
+Sex=
+Wt_kg=0
+Ht_cm= 0
+BMI= 0
+Neck circumference _cm= 0
+ESS=[Script error at line 793 column 4 - [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified]
+
+Study_Date=19/04/2018
+Study_Start_Time=22:32:35
+Study_End_Time=06:36:56
+Lights_Out_Time= 22:32:34
+Lights_On_Time=06:36:35
+Sleep_Onset_Time=22:35:35
+Sleep_Offset_Time=06:35:34
+Time_in_Bed _min=480.0
+Total_Sleep_Time (min)=458.0
+Wake_After_Sleep_Onset_min= 22.5
+Sleep_Efficiency_Percent=94.6
+Sleep_Latency_min=3.0
+REM_Latency_min=111.5
+N2_Latency_min=9.5
+N3_Latency_min=24.5
+NREM _min=380.5
+NREM _Percent=83.1
+
+N1_min=120.0
+N1_Percent=26.2
+N2_min=162.5
+N2_Percent=35.5
+N3_min=98.0
+N3_Percent=21.4
+REM _min=77.5
+REM _Percent=16.9
+
+NREM_min_Supine=0.0
+NREM_Percent_Supine=0.0
+N1_min_Supine= [@8004,1 7 P1]
+N1_Percent_Supine=0.0% in regards to TST
+N1_Percent_Supine=0% in regards to N1
+N2_min_Supine= 0.0
+N2_Percent_Supine= 0.0% in regards to TST
+N2_Percent_Supine= 0% in regards to N2
+N3_min_Supine= 0.0
+N3_Percent_Supine= 0.0% in regards to TST
+N3_Percent_Supine= 0% in regards to N3
+
+REM_min_Supine=0.0
+REM_Percent_Supine= 0.0
+
+NREM_min_Nonsupine=0.0
+NREM_Percent_Nonsupine=0.0
+N1_min_Nonsupine= 0.0
+N1_Percent_Nonsupine= 0.0% in regards to TST
+N1_Percent_Nonsupine= 0% in regards to N1
+N2_min_Nonsupine= 0.0
+N2_Percent_Nonsupine= 0.0% in regards to TST
+N2_Percent_Nonsupine= 0% in regards to N2
+N3_min_Nonsupine= 0.0
+N3_Percent_Nonsupine= 0.0% in regards to TST
+N3_Percent_Nonsupine= 0% in regards to N3
+REM_min_Nonsupine=0.0
+REM_Percent_Nonsupine=0.0
+Awakenings_TST=23
+Awakenings_REM= 23
+Awakening_NREM= 23
+Arousal_Index_TST=42.2
+Arousal_Index_REM=27.9
+Arousal_Index_NREM=42.9
+Arousal_Index_N1= 0.0
+Arousal_Index_N2= 0.0
+Arousal_Index_N3= 0.0
+Arousal_Count_TST= 308
+Arousal_Count_REM=36
+Arousal_Count_NREM=272
+Arousal_Count_N1= 0
+Arousal_Count_N2= 0
+Arousal_Count_N3= 0
+Spon_Arousals_Index_TST=10.2
+Spon_Arousals_Index_REM=5.4
+Spon_Arousals_Index_NREM=11.2
+Spon_Arousal_Count_TST=78
+Spon_Arousal_Count_REM=7
+Spon_Arousal_Count_NREM=71
+Resp_Arousals_Index_TST=29.3
+Resp_Arousals_Index_REM=22.5
+Resp_Arousals_Index_NREM=30.7
+Resp_Arousal_Count_TST=224
+Resp_Arousal_Count_REM=29
+Resp_Arousal_Count_NREM=195
+Limb_Arousals_Index_TST=0.8
+Limb_Arousals_Index_REM=0.0
+Limb_Arousals_Index_NREM=0.9
+Limb_Arousal_Count_TST=6
+Limb_Arousal_Count_REM=0
+Limb_Arousal_Count_NREM=6
+Periodic_Limb_Arousals_Index_TST= 0.0
+Periodic_Limb_Arousals_Index_REM= 0.0
+Periodic_Limb_Arousals_Index_NREM= 0.0
+Periodic_Limb_Arousal_Count_TST= 0
+Periodic_Limb_Arousal_Count_REM= 0
+Periodic_Limb_Arousal_Count_NREM= 0
+Central_Apnea_Count_TST=6
+Central_Apnea_Index_TST=0.8
+Obstructive_Apnea_Count_TST=329
+Obstructive_Apnea_Index_TST=43.1
+Hypopnea _Count_TST=138
+Hypopnea_Index_TST=18.1
+RERA_Count_TST=1
+RERA_Index_TST= 0.0
+Apnea_Hypopnea_Index_TST=63.1
+Respiratory_Disturbance_Index_TST=63.3
+Central_Apnea_Count_REM=0
+Central_Apnea_Index_REM=0.0
+Obstructive_Apnea_Count_REM=71
+Obstructive_Apnea_Index_REM=55.0
+Hypopnea _Count_REM=19
+Hypopnea_Index_REM=14.7
+RERA_Count_REM=0
+RERA_Index_REM= 0.0
+Apnea_Hypopnea_Index_REM=69.7
+Respiratory_Disturbance_Index_REM=69.7
+Central_Apnea_Count_NREM=6
+Central_Apnea_Index_NREM=0.9
+Obstructive_Apnea_Count_NREM=258
+Obstructive_Apnea_Index_NREM=40.7
+Hypopnea _Count_NREM=119
+Hypopnea_Index_NREM=18.8
+RERA_Count_NREM=1
+RERA_Index_NREM= 0.0
+Apnea_Hypopnea_Index_NREM=61.8
+Respiratory_Disturbance_Index_NREM=62.0
+
+Central_Apnea_Count_TST_Supine=0
+Central_Apnea_Index_TST_Supine=0.0
+Obstructive_Apnea_Count_TST_Supine=0
+Obstructive_Apnea_Index_TST_Supine=0.0
+Hypopnea _Count_TST_Supine =0
+Hypopnea_Index_TST_Supine =0.0
+RERA_Count_TST_Supine = 0
+RERA_Index_TST_Supine = 0.0
+Apnea_Hypopnea_Index_TST_Supine =0.0
+Respiratory_Disturbance_Index_TST_Supine = 0.0
+Central_Apnea_Count_REM_Supine =0
+Central_Apnea_Index_REM_Supine =0.0
+Obstructive_Apnea_Count_REM_Supine =0
+Obstructive_Apnea_Index_REM_Supine=0.0
+Hypopnea_Count_REM_Supine=0
+Hypopnea_Index_REM_Supine =0.0
+RERA_Count_REM_Supine = 0
+RERA_Index_REM_Supine = 0.0
+Apnea_Hypopnea_Index_REM_Supine =0.0
+Respiratory_Disturbance_Index_REM_Supine = 0.0
+Central_Apnea_Count_NREM_Supine =0
+Central_Apnea_Index_NREM_Supine =0.0
+Obstructive_Apnea_Count_NREM_Supine =0
+Obstructive_Apnea_Index_NREM_Supine =0.0
+Hypopnea_Count_NREM_Supine =0
+Hypopnea_Index_NREM_Supine =0.0
+RERA_Count_NREM_Supine = 0
+RERA_Index_NREM_Supine = 0.0
+Apnea_Hypopnea_Index_NREM_Supine =0.0
+Respiratory_Disturbance_Index_NREM_Supine = 0.0
+
+Central_Apnea_Count_TST_NonSupine=0
+Central_Apnea_Index_TST_NonSupine=0.0
+Obstructive_Apnea_Count_TST_NonSupine=0
+Obstructive_Apnea_Index_TST_NonSupine=0.0
+Hypopnea _Count_TST_NonSupine =0
+Hypopnea_Index_TST_NonSupine =0.0
+RERA_Count_TST_NonSupine = 0
+RERA_Index_TST_NonSupine = 0.0
+Apnea_Hypopnea_Index_TST_NonSupine =0.0
+Respiratory_Disturbance_Index_TST_NonSupine = 0.0
+Central_Apnea_Count_REM_NonSupine =0
+Central_Apnea_Index_REM_NonSupine =0.0
+Obstructive_Apnea_Count_REM_NonSupine =71
+Obstructive_Apnea_Index_REM_NonSupine=55.0
+Hypopnea_Count_REM_NonSupine=19
+Hypopnea_Index_REM_NonSupine =14.7
+RERA_Count_REM_NonSupine = 0
+RERA_Index_REM_NonSupine = 0.0
+Apnea_Hypopnea_Index_REM_NonSupine =0.0
+Respiratory_Disturbance_Index_REM_NonSupine = 0.0
+Central_Apnea_Count_NREM_NonSupine =6
+Central_Apnea_Index_NREM_NonSupine =0.9
+Obstructive_Apnea_Count_NREM_NonSupine =258
+Obstructive_Apnea_Index_NREM_NonSupine =40.7
+Hypopnea_Count_NREM_NonSupine =119
+Hypopnea_Index_NREM_NonSupine =18.8
+RERA_Count_NREM_NonSupine = 0
+RERA_Index_NREM_NonSupine =0.0
+Apnea_Hypopnea_Index_NREM_NonSupine =61.8
+Respiratory_Disturbance_Index_NREM_NonSupine = 0.0
+
+SpO2_lessthan_70percent_min_TIB=0.0
+SpO2_Percentage_In_Range_70_to_79_min_TIB= 1.6
+SpO2_lessthan_80percent_min_TIB=0.4
+SpO2_Percentage_In_Range_80_to_89_min_TIB=31.1
+SpO2_lessthan_90percent_min_TIB=10.0 
+SpO2_Percentage_In_Range_90_to_100_min_TIB=435.9
+
+Mean SpO2_percent_TIB=92
+Mean SpO2_percent_TST=94
+Mean SpO2_percent_Wake=94
+Mean SpO2_percent_REM=92
+Mean SpO2_percent_NREM=94
+Min SpO2_percent_TIB=73
+Min SpO2_percent_TST=73
+Min SpO2_percent_Wake=
+Min SpO2_percent_REM=73
+Min SpO2_percent_NREM=76
+
+O2_Desat3percent_index_TIB=0
+O2_Desat3percent_Index_TST=54.9
+O2_Desat3percent_Index_REM=68.1
+O2_Desat3percent_Index_NREM=52.2
+O2_Desat3percent_Count_TIB=425
+O2_Desat3percent_Count_TST=419
+O2_Desat3percent_Count_REM=88
+O2_Desat3percent_Count_NREM=331
+O2_Desat4percent_index_TIB=0
+O2_Desat4percent_Index_TST=47.0
+O2_Desat4percent_Index_REM=65.8
+O2_Desat4percent_Index_NREM=43.2
+O2_Desat4percent_Count_TIB=361
+O2_Desat4percent_Count_TST=359
+O2_Desat4percent_Count_REM=85
+O2_Desat4percent_Count_NREM=274
+
+Limb_Movement_Count_TST=23
+Limb_Movement_Index_TST=3.0
+PLM_Series_Count_TST=1
+PLM_Series_Index_TST=0.1
+
+
+
+
+
+
+
+
+
+
+
+
+
