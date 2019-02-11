@@ -1,7 +1,7 @@
 <div id=D__ID>
         <section id=form_container__ID>
             <div id=header__ID>
-                Title
+                Karolinska Sleepiness Scale
             </div>
             <form id=F__ID>
                 <div class='container'>
@@ -25,28 +25,30 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>1.</span>
+                            <input type='text' maxlength='5' class='form-control' name='KSS_time' id='KSS_time' readonly />
+                        </div>
+                    </div>
+                    </div></div>
+     
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <span class='survey-question'>Indicate which level best reflects the state experienced in the last 30 minutes.</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <div class='row center__ID'>
-                                <div class='col-sm'>
-                                    <span class='survey-answer'>a</span>
-                                </div>
-                                <div class='col-sm'>
-                                    <span class='survey-answer'>b</span>
-                                </div>
-                                <div class='col-sm'>
-                                    <span class='survey-answer'>c</span>
-                                </div>
-                                <div class='col-sm'>
-                                    <span class='survey-answer'>d</span>
-                                </div>
-                                <div class='col-sm'>
-                                    <span class='survey-answer'>e</span>
-                                </div>
-                            </div>
+                            <input type='radio' name='KSS' id='KSS_1' value='1'> <label class='survey-answer' for='KSS_1'>Extremely alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_2' value='2'> <label class='survey-answer' for='KSS_2'>Very alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_3' value='3'> <label class='survey-answer' for='KSS_3'>Alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_4' value='4'> <label class='survey-answer' for='KSS_4'>Rather alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_5' value='5'> <label class='survey-answer' for='KSS_5'>Neither alert nor sleepy</label><br />
+                            <input type='radio' name='KSS' id='KSS_6' value='6'> <label class='survey-answer' for='KSS_6'>Some signs of sleepiness</label><br />
+                            <input type='radio' name='KSS' id='KSS_7' value='7'> <label class='survey-answer' for='KSS_7'>Sleepy, but no effort to keep awake</label><br />
+                            <input type='radio' name='KSS' id='KSS_8' value='8'> <label class='survey-answer' for='KSS_8'>Sleepy, but some effort to keep awake</label><br />
+                            <input type='radio' name='KSS' id='KSS_9' value='9'> <label class='survey-answer' for='KSS_9'>Very sleepy, great effort to keep awake, fighting sleep</label><br />
+                            <input type='radio' name='KSS' id='KSS_10' value='10'> <label class='survey-answer' for='KSS_10'>Extremely sleepy, can't keep awake</label><br />
                         </div>
                     </div>
                     </div></div>
@@ -63,6 +65,8 @@
             </form>
         </section>
         <script>
+            var nowObj;
+            var str;
             function F__ID(){
                 //-------------------------------------
                 VmInclude:'__COMPONENT__/f/form.01.js'
@@ -92,8 +96,22 @@
                         console.log('pressed checkbox');
                     });
                 });
+    
+                // Add a leading zero to intergers 
+                function addLeadingZero(val,n) {
+                    var s = String(val);
+                    while (s.length < n) {s = "0" + s;}
+                    return s;
+                }
+
+                nowObj = new Date();
+                str = nowObj.getFullYear() + '-' + addLeadingZero(nowObj.getMonth()+1,2) + '-' + addLeadingZero(nowObj.getDate(),2) + 'T' + addLeadingZero(nowObj.getHours(),2) + ':' + addLeadingZero(nowObj.getMinutes(),2);
+                $(document).ready(function() {
+                    $('#KSS_time').val(str);
+                });
             }
         </script>
+        
         <style>
             VmInclude:__COMPONENT__/f/form.01.css
             VmInclude:__CURRENT_PATH__/../../f/form.02.css
