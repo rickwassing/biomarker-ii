@@ -56,6 +56,19 @@
     border: 3px solid #adb8c0;
 }
 
+#F__ID .survey-question.required::after {
+    content: " *";
+    color: black;
+}
+
+/* #F__ID input:invalid::before {
+    content: "*";
+    position: relative;
+    color: red;
+    left:-15px;
+    top:-2em;
+} */
+
 h1 {
     text-transform: uppercase;
     font-size: 12pt;

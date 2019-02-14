@@ -9,7 +9,7 @@
                     <div class='row row__ID' id=row_participant__ID>
                         <div class='col-sm-12 col-lg-9 input__ID'>
                             <span class='label__ID'>Participant</span><br>
-                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' />
+                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
                         </div>
                         <div class='col-sm-12 col-lg-3 input__ID'>
                             <span class='label__ID'>Participant ID</span><br>
@@ -29,6 +29,25 @@
                         </div>
                     </div>
                     </div></div>
+
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <span class='survey-question required'>What session is this?</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='radio' name='PTSA_session' id='PTSA_session_practice' value='practice' required>  <label class='survey-answer' for='PTSA_session_practice'>Practice</label><br />
+                            <input type='radio' name='PTSA_session' id='PTSA_session_1' value='1'>  <label class='survey-answer' for='PTSA_session_1'>Session 1 - 9:00 am</label><br />
+                            <input type='radio' name='PTSA_session' id='PTSA_session_2' value='2'> <label class='survey-answer' for='PTSA_session_2'>Session 2 - 11:00 am</label><br />
+                            <input type='radio' name='PTSA_session' id='PTSA_session_3' value='3'> <label class='survey-answer' for='PTSA_session_3'>Session 3 - 13:00 pm</label><br />
+                            <input type='radio' name='PTSA_session' id='PTSA_session_4' value='4'> <label class='survey-answer' for='PTSA_session_4'>Session 4 - 15:00 pm</label><br />
+                            <input type='radio' name='PTSA_session' id='PTSA_session_5' value='5'> <label class='survey-answer' for='PTSA_session_5'>Session 5 - 17:00 pm</label><br />
+                        </div>
+                    </div>
+                    </div></div>
      
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
@@ -44,12 +63,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>How well were you able to <u>concentrate</u> on the tasks?</span>
+                            <span class='survey-question required'>How well were you able to <u>concentrate</u> on the tasks?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_001' id='PTSA_001_1' value='1'> <label class='survey-answer' for='PTSA_001_1'>1. Very poorly</label><br />
+                            <input type='radio' name='PTSA_001' id='PTSA_001_1' value='1' required> <label class='survey-answer' for='PTSA_001_1'>1. Very poorly</label><br />
                             <input type='radio' name='PTSA_001' id='PTSA_001_2' value='2'> <label class='survey-answer' for='PTSA_001_2'>2.</label><br />
                             <input type='radio' name='PTSA_001' id='PTSA_001_3' value='3'> <label class='survey-answer' for='PTSA_001_3'>3. Somewhat poorly</label><br />
                             <input type='radio' name='PTSA_001' id='PTSA_001_4' value='4'> <label class='survey-answer' for='PTSA_001_4'>4.</label><br />
@@ -66,12 +85,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>How <u>difficult</u> were the tasks?</span>
+                            <span class='survey-question required'>How <u>difficult</u> were the tasks?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_002' id='PTSA_002_1' value='1'> <label class='survey-answer' for='PTSA_002_1'>1. Extremely  difficult</label><br />
+                            <input type='radio' name='PTSA_002' id='PTSA_002_1' value='1' required> <label class='survey-answer' for='PTSA_002_1'>1. Extremely  difficult</label><br />
                             <input type='radio' name='PTSA_002' id='PTSA_002_2' value='2'> <label class='survey-answer' for='PTSA_002_2'>2.</label><br />
                             <input type='radio' name='PTSA_002' id='PTSA_002_3' value='3'> <label class='survey-answer' for='PTSA_002_3'>3. Somewhat difficult</label><br />
                             <input type='radio' name='PTSA_002' id='PTSA_002_4' value='4'> <label class='survey-answer' for='PTSA_002_4'>4.</label><br />
@@ -88,12 +107,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>How much <u>effort</u> did you put into the tasks?</span>
+                            <span class='survey-question required'>How much <u>effort</u> did you put into the tasks?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_003' id='PTSA_003_1' value='1'> <label class='survey-answer' for='PTSA_003_1'>1. None</label><br />
+                            <input type='radio' name='PTSA_003' id='PTSA_003_1' value='1' required> <label class='survey-answer' for='PTSA_003_1'>1. None</label><br />
                             <input type='radio' name='PTSA_003' id='PTSA_003_2' value='2'> <label class='survey-answer' for='PTSA_003_2'>2.</label><br />
                             <input type='radio' name='PTSA_003' id='PTSA_003_3' value='3'> <label class='survey-answer' for='PTSA_003_3'>3. A little effort</label><br />
                             <input type='radio' name='PTSA_003' id='PTSA_003_4' value='4'> <label class='survey-answer' for='PTSA_003_4'>4.</label><br />
@@ -110,12 +129,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>How <u>motivated</u> were you to perform the tasks well?</span>
+                            <span class='survey-question required'>How <u>motivated</u> were you to perform the tasks well?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_004' id='PTSA_004_1' value='1'> <label class='survey-answer' for='PTSA_004_1'>1. Extremely <u>un</u>motivated</label><br />
+                            <input type='radio' name='PTSA_004' id='PTSA_004_1' value='1' required> <label class='survey-answer' for='PTSA_004_1'>1. Extremely <u>un</u>motivated</label><br />
                             <input type='radio' name='PTSA_004' id='PTSA_004_2' value='2'> <label class='survey-answer' for='PTSA_004_2'>2.</label><br />
                             <input type='radio' name='PTSA_004' id='PTSA_004_3' value='3'> <label class='survey-answer' for='PTSA_004_3'>3. Somewhat  <u>un</u>motivated</label><br />
                             <input type='radio' name='PTSA_004' id='PTSA_004_4' value='4'> <label class='survey-answer' for='PTSA_004_4'>4.</label><br />
@@ -134,13 +153,13 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Think about the first time you took this test. How quickly do you think you responded now compared to that very first time you took this test?</span>
+                            <span class='survey-question required'>Think about the first time you took this test. How quickly do you think you responded now compared to that very first time you took this test?</span>
                             <span class='survey-subquestion'>Please answer by selecting the option below that best reflects your performance.</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_005' id='PTSA_005_1' value='1'> <label class='survey-answer' for='PTSA_005_1'>1. Much slower than the first time</label><br />
+                            <input type='radio' name='PTSA_005' id='PTSA_005_1' value='1' required> <label class='survey-answer' for='PTSA_005_1'>1. Much slower than the first time</label><br />
                             <input type='radio' name='PTSA_005' id='PTSA_005_2' value='2'> <label class='survey-answer' for='PTSA_005_2'>2.</label><br />
                             <input type='radio' name='PTSA_005' id='PTSA_005_3' value='3'> <label class='survey-answer' for='PTSA_005_3'>3. Somewhat slower than the first time</label><br />
                             <input type='radio' name='PTSA_005' id='PTSA_005_4' value='4'> <label class='survey-answer' for='PTSA_005_4'>4.</label><br />
@@ -154,18 +173,18 @@
                     </div></div>
                     <br />
                     <h1>N-BACK</h1>
-                    <span class='survey-subquestion'>On this task, you completed four different NBACKS: 0-back, 1-back, 2-back, and 3-back.</span>
+                    <span class='survey-subquestion'>On this task, you completed four different NBACKS: 1-back, 2-back, and 3-back.</span>
 
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Please indicate what percentage of the <u>0-back</u> problems you answered correctly.</span>
+                            <span class='survey-question required'>Please indicate what percentage of the <u>1-back</u> problems you answered correctly.</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_006' id='PTSA_006_1' value='1'> <label class='survey-answer' for='PTSA_006_1'>1. 0-19% of the problems</label><br />
+                            <input type='radio' name='PTSA_006' id='PTSA_006_1' value='1' required> <label class='survey-answer' for='PTSA_006_1'>1. 0-19% of the problems</label><br />
                             <input type='radio' name='PTSA_006' id='PTSA_006_2' value='2'> <label class='survey-answer' for='PTSA_006_2'>2. 20-39% of the problems</label><br />
                             <input type='radio' name='PTSA_006' id='PTSA_006_3' value='3'> <label class='survey-answer' for='PTSA_006_3'>3. 40-59% of the problems</label><br />
                             <input type='radio' name='PTSA_006' id='PTSA_006_4' value='4'> <label class='survey-answer' for='PTSA_006_4'>4. 60-79% of the problems</label><br />
@@ -178,12 +197,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Please indicate what percentage of the <u>1-back</u> problems you answered correctly.</span>
+                            <span class='survey-question required'>Please indicate what percentage of the <u>2-back</u> problems you answered correctly.</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_007' id='PTSA_007_1' value='1'> <label class='survey-answer' for='PTSA_007_1'>1. 0-19% of the problems</label><br />
+                            <input type='radio' name='PTSA_007' id='PTSA_007_1' value='1' required> <label class='survey-answer' for='PTSA_007_1'>1. 0-19% of the problems</label><br />
                             <input type='radio' name='PTSA_007' id='PTSA_007_2' value='2'> <label class='survey-answer' for='PTSA_007_2'>2. 20-39% of the problems</label><br />
                             <input type='radio' name='PTSA_007' id='PTSA_007_3' value='3'> <label class='survey-answer' for='PTSA_007_3'>3. 40-59% of the problems</label><br />
                             <input type='radio' name='PTSA_007' id='PTSA_007_4' value='4'> <label class='survey-answer' for='PTSA_007_4'>4. 60-79% of the problems</label><br />
@@ -196,34 +215,16 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Please indicate what percentage of the <u>2-back</u> problems you answered correctly.</span>
+                            <span class='survey-question required'>Please indicate what percentage of the <u>3-back</u> problems you answered correctly.</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PTSA_008' id='PTSA_008_1' value='1'> <label class='survey-answer' for='PTSA_008_1'>1. 0-19% of the problems</label><br />
+                            <input type='radio' name='PTSA_008' id='PTSA_008_1' value='1' required> <label class='survey-answer' for='PTSA_008_1'>1. 0-19% of the problems</label><br />
                             <input type='radio' name='PTSA_008' id='PTSA_008_2' value='2'> <label class='survey-answer' for='PTSA_008_2'>2. 20-39% of the problems</label><br />
                             <input type='radio' name='PTSA_008' id='PTSA_008_3' value='3'> <label class='survey-answer' for='PTSA_008_3'>3. 40-59% of the problems</label><br />
                             <input type='radio' name='PTSA_008' id='PTSA_008_4' value='4'> <label class='survey-answer' for='PTSA_008_4'>4. 60-79% of the problems</label><br />
                             <input type='radio' name='PTSA_008' id='PTSA_008_5' value='5'> <label class='survey-answer' for='PTSA_008_5'>5. 80-100% of the problems</label><br />
-                        </div>
-                    </div>
-                    </div></div>
-
-                    <!-- Question and Answerset -->
-                    <div class='row row__ID'><div class='col'>
-                    <div class='row'>
-                        <div class='col'>
-                            <span class='survey-question'>Please indicate what percentage of the <u>3-back</u> problems you answered correctly.</span>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col'>
-                            <input type='radio' name='PTSA_009' id='PTSA_009_1' value='1'> <label class='survey-answer' for='PTSA_009_1'>1. 0-19% of the problems</label><br />
-                            <input type='radio' name='PTSA_009' id='PTSA_009_2' value='2'> <label class='survey-answer' for='PTSA_009_2'>2. 20-39% of the problems</label><br />
-                            <input type='radio' name='PTSA_009' id='PTSA_009_3' value='3'> <label class='survey-answer' for='PTSA_009_3'>3. 40-59% of the problems</label><br />
-                            <input type='radio' name='PTSA_009' id='PTSA_009_4' value='4'> <label class='survey-answer' for='PTSA_009_4'>4. 60-79% of the problems</label><br />
-                            <input type='radio' name='PTSA_009' id='PTSA_009_5' value='5'> <label class='survey-answer' for='PTSA_009_5'>5. 80-100% of the problems</label><br />
                         </div>
                     </div>
                     </div></div>

@@ -9,7 +9,7 @@
                     <div class='row row__ID' id=row_participant__ID>
                         <div class='col-sm-12 col-lg-9 input__ID'>
                             <span class='label__ID'>Participant</span><br>
-                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' />
+                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
                         </div>
                         <div class='col-sm-12 col-lg-3 input__ID'>
                             <span class='label__ID'>Participant ID</span><br>
@@ -29,17 +29,36 @@
                         </div>
                     </div>
                     </div></div>
+
+                    <!-- Question and Answerset -->
+                    <div class='row row__ID'><div class='col'>
+                    <div class='row'>
+                        <div class='col'>
+                            <span class='survey-question required'>What session is this?</span>
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type='radio' name='KSS_session' id='KSS_session_practice' value='practice' required>  <label class='survey-answer' for='KSS_session_practice'>Practice</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_1' value='1'>  <label class='survey-answer' for='KSS_session_1'>Session 1 - 9:00 am</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_2' value='2'> <label class='survey-answer' for='KSS_session_2'>Session 2 - 11:00 am</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_3' value='3'> <label class='survey-answer' for='KSS_session_3'>Session 3 - 13:00 pm</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_4' value='4'> <label class='survey-answer' for='KSS_session_4'>Session 4 - 15:00 pm</label><br />
+                            <input type='radio' name='KSS_session' id='KSS_session_5' value='5'> <label class='survey-answer' for='KSS_session_5'>Session 5 - 17:00 pm</label><br />
+                        </div>
+                    </div>
+                    </div></div>
      
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Indicate which level best reflects the state experienced in the last 30 minutes.</span>
+                            <span class='survey-question required'>Indicate which level best reflects the state experienced in the last 30 minutes.</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='KSS' id='KSS_1' value='1'> <label class='survey-answer' for='KSS_1'>Extremely alert</label><br />
+                            <input type='radio' name='KSS' id='KSS_1' value='1' required> <label class='survey-answer' for='KSS_1'>Extremely alert</label><br />
                             <input type='radio' name='KSS' id='KSS_2' value='2'> <label class='survey-answer' for='KSS_2'>Very alert</label><br />
                             <input type='radio' name='KSS' id='KSS_3' value='3'> <label class='survey-answer' for='KSS_3'>Alert</label><br />
                             <input type='radio' name='KSS' id='KSS_4' value='4'> <label class='survey-answer' for='KSS_4'>Rather alert</label><br />

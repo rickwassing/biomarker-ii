@@ -9,7 +9,7 @@
                     <div class='row row__ID' id=row_participant__ID>
                         <div class='col-sm-12 col-lg-9 input__ID'>
                             <span class='label__ID'>Participant</span><br>
-                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' />
+                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
                         </div>
                         <div class='col-sm-12 col-lg-3 input__ID'>
                             <span class='label__ID'>Participant ID</span><br>
@@ -25,12 +25,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Location</span>
+                            <span class='survey-question required'>Location</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col-sm col-sm-2'>
-                            <input type='radio' name='PSGE_location' value='AISH'> <span class='survey-answer'>AISH</span>
+                            <input type='radio' name='PSGE_location' value='AISH' required> <span class='survey-answer'>AISH</span>
                         </div>
                         <div class='col-sm col-sm-2'>
                             <input type='radio' name='PSGE_location' value='WIMR'> <span class='survey-answer'>WIMR</span>
@@ -169,12 +169,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Has today been unusual in any respect?</span>
+                            <span class='survey-question required>Has today been unusual in any respect?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_unusual' id='PSGE_unusual_0' value='0'> <label class='survey-answer' for='PSGE_unusual_0'>no</label><br />
+                            <input type='radio' name='PSGE_unusual' id='PSGE_unusual_0' value='0' required> <label class='survey-answer' for='PSGE_unusual_0'>no</label><br />
                             <input type='radio' name='PSGE_unusual' id='PSGE_unusual_1' value='1'> <label class='survey-answer' for='PSGE_unusual_1'>yes</label>
                         </div>
                     </div>
@@ -194,13 +194,13 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>How much sleep did you have last night?</span>
+                            <span class='survey-question required'>How much sleep did you have last night?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
                             <label class='survey-label' id='PSGE_tst_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='PSGE_tst' id='PSGE_tst' />
+                            <input type='text' maxlength='5' class='form-control' name='PSGE_tst' id='PSGE_tst' required />
                             <label class='survey-label' id='PSGE_tst_postlabel'>(HH:MM)</label>
                         </div>
                     </div>
@@ -210,12 +210,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Was this amount of sleep enough?</span>
+                            <span class='survey-question required'>Was this amount of sleep enough?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_tstSufficient' id='PSGE_tstSufficient_0' value='0'> <label class='survey-answer' for='PSGE_tstSufficient_0'>no</label><br />
+                            <input type='radio' name='PSGE_tstSufficient' id='PSGE_tstSufficient_0' value='0' required> <label class='survey-answer' for='PSGE_tstSufficient_0'>no</label><br />
                             <input type='radio' name='PSGE_tstSufficient' id='PSGE_tstSufficient_1' value='1'> <label class='survey-answer' for='PSGE_tstSufficient_1'>yes</label>
                         </div>
                     </div>
@@ -225,12 +225,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Did you nap or doze today?</span>
+                            <span class='survey-question required'>Did you nap or doze today?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_nap' id='PSGE_nap_0' value='0'> <label class='survey-answer' for='PSGE_nap_0'>no</label><br />
+                            <input type='radio' name='PSGE_nap' id='PSGE_nap_0' value='0' required> <label class='survey-answer' for='PSGE_nap_0'>no</label><br />
                             <input type='radio' name='PSGE_nap' id='PSGE_nap_1' value='1'> <label class='survey-answer' for='PSGE_nap_1'>yes</label>
                         </div>
                     </div>
@@ -264,13 +264,13 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>At what time did you last eat a meal?</span>
+                            <span class='survey-question required'>At what time did you last eat a meal?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
                             <label class='survey-label' id='PSGE_mealTime_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='PSGE_mealTime' id='PSGE_mealTime' />
+                            <input type='text' maxlength='5' class='form-control' name='PSGE_mealTime' id='PSGE_mealTime' required />
                             <label class='survey-label' id='PSGE_mealTime_postlabel'>(HH:MM)</label>
                         </div>
                     </div>
@@ -280,13 +280,13 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>At what time did you last eat a snack?</span>
+                            <span class='survey-question required'>At what time did you last eat a snack?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
                             <label class='survey-label' id='PSGE_snackTime_prelabel'></label>
-                            <input type='text' maxlength='5' class='form-control' name='PSGE_snackTime' id='PSGE_snackTime' />
+                            <input type='text' maxlength='5' class='form-control' name='PSGE_snackTime' id='PSGE_snackTime' required />
                             <label class='survey-label' id='PSGE_snackTime_postlabel'>(HH:MM)</label>
                         </div>
                     </div>
@@ -296,12 +296,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Did you consume any alcohol in the last 24 hours?</span>
+                            <span class='survey-question required'>Did you consume any alcohol in the last 24 hours?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_alcohol' id='PSGE_alcohol_0' value='0'> <label class='survey-answer' for='PSGE_alcohol_0'>no</label><br />
+                            <input type='radio' name='PSGE_alcohol' id='PSGE_alcohol_0' value='0' required> <label class='survey-answer' for='PSGE_alcohol_0'>no</label><br />
                             <input type='radio' name='PSGE_alcohol' id='PSGE_alcohol_1' value='1'> <label class='survey-answer' for='PSGE_alcohol_1'>yes</label>
                         </div>
                     </div>
@@ -324,7 +324,7 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>How much cups or glasses of these drinks have you consumed in the last 12 hours?</span>
+                            <span class='survey-question required'>How much cups or glasses of these drinks have you consumed in the last 12 hours?</span>
                         </div>
                     </div>
                     <div class='row'>
@@ -332,7 +332,7 @@
                             <span class='survey-answer'>Tea</span>
                         </div>
                         <div class='col-sm-2'>
-                            <input type='number' maxlength="4" class='form-control' name='PSGE_tea'>
+                            <input type='number' maxlength="4" class='form-control' name='PSGE_tea' required >
                         </div>
                         <div class='col'>
                             <span class='survey-label'>ml</span>
@@ -340,10 +340,10 @@
                     </div>
                     <div class='row'>
                         <div class='col-sm-2'>
-                            <span class='survey-answer'>Coffee</span>
+                            <span class='survey-answer required'>Coffee</span>
                         </div>
                         <div class='col-sm-2'>
-                            <input type='number' maxlength="4" class='form-control' name='PSGE_coffee'>
+                            <input type='number' maxlength="4" class='form-control' name='PSGE_coffee' required >
                         </div>
                         <div class='col'>
                             <span class='survey-label'>ml</span>
@@ -351,10 +351,10 @@
                     </div>
                     <div class='row'>
                         <div class='col-sm-2'>
-                            <span class='survey-answer'>Cola/Soda</span>
+                            <span class='survey-answer required'>Cola/Soda</span>
                         </div>
                         <div class='col-sm-2'>
-                            <input type='number' maxlength="4" class='form-control' name='PSGE_cola'>
+                            <input type='number' maxlength="4" class='form-control' name='PSGE_cola' required >
                         </div>
                         <div class='col'>
                             <span class='survey-label'>ml</span>
@@ -366,12 +366,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Do you have any physical complaints which may affect your sleep tonight?</span>
+                            <span class='survey-question required'>Do you have any physical complaints which may affect your sleep tonight?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_physCompl' id='PSGE_physCompl_0' value='0'> <label class='survey-answer' for='PSGE_physCompl_0'>no</label><br />
+                            <input type='radio' name='PSGE_physCompl' id='PSGE_physCompl_0' value='0' required> <label class='survey-answer' for='PSGE_physCompl_0'>no</label><br />
                             <input type='radio' name='PSGE_physCompl' id='PSGE_physCompl_1' value='1'> <label class='survey-answer' for='PSGE_physCompl_1'>yes</label>
                         </div>
                     </div>
@@ -391,12 +391,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>What positions do you usually sleep in at home?</span>
+                            <span class='survey-question required'>What positions do you usually sleep in at home?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_back' value='back'>  <label class='survey-answer' for='PSGE_sleepPos_back'>Back</label><br />
+                            <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_back' value='back' required>  <label class='survey-answer' for='PSGE_sleepPos_back'>Back</label><br />
                             <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_left' value='left'>  <label class='survey-answer' for='PSGE_sleepPos_left'>Left</label><br />
                             <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_right' value='left'> <label class='survey-answer' for='PSGE_sleepPos_right'>Right</label><br />
                             <input type='radio' name='PSGE_sleepPos' id='PSGE_sleepPos_belly' value='left'> <label class='survey-answer' for='PSGE_sleepPos_belly'>Belly</label><br />
@@ -408,12 +408,12 @@
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
                         <div class='col'>
-                            <span class='survey-question'>Is there pain/discomfort/other that limits your body position?</span>
+                            <span class='survey-question required'>Is there pain/discomfort/other that limits your body position?</span>
                         </div>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='radio' name='PSGE_pain' id='PSGE_pain_0' value='0'> <label class='survey-answer' for='PSGE_pain_0'>no</label><br />
+                            <input type='radio' name='PSGE_pain' id='PSGE_pain_0' value='0' required> <label class='survey-answer' for='PSGE_pain_0'>no</label><br />
                             <input type='radio' name='PSGE_pain' id='PSGE_pain_1' value='1'> <label class='survey-answer' for='PSGE_pain_1'>yes</label>
                         </div>
                     </div>

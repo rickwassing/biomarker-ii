@@ -9,7 +9,7 @@
                     <div class='row row__ID' id=row_participant__ID>
                         <div class='col-sm-12 col-lg-9 input__ID'>
                             <span class='label__ID'>Participant</span><br>
-                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' />
+                            <input type='text' name='Participant' class='form-control' id='Participant__ID' data-id='Participant' required />
                         </div>
                         <div class='col-sm-12 col-lg-3 input__ID'>
                             <span class='label__ID'>Participant ID</span><br>
@@ -24,11 +24,11 @@
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
-                        <span class='survey-question'>How many years of education have you received?</span>
+                        <span class='survey-question required'>How many years of education have you received?</span>
                     </div>
                     <div class='row'>
                         <div class='col-sm-2'>
-                            <input type='number' class='form-control' name='EDU_years'/>
+                            <input type='number' class='form-control' name='EDU_years' required />
                         </div>
                         <div class='col-sm-10'>
                             <span class='survey-answer'>years</span>
@@ -39,11 +39,11 @@
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
-                        <span class='survey-question'>What is the highest educational qualification you have attained (HSC, University, TAFE etc.)?</span>
+                        <span class='survey-question required'>What is the highest educational qualification you have attained (HSC, University, TAFE etc.)?</span>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='text' class='form-control' name='EDU_qual'/>
+                            <input type='text' class='form-control' name='EDU_qual' required />
                         </div>
                     </div>
                     </div></div>
@@ -51,11 +51,11 @@
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
-                        <span class='survey-question'>What is your current primary occupation?</span>
+                        <span class='survey-question required'>What is your current primary occupation?</span>
                     </div>
                     <div class='row'>
                         <div class='col'>
-                            <input type='text' class='form-control' name='EDU_occupation'/>
+                            <input type='text' class='form-control' name='EDU_occupation' required />
                         </div>
                     </div>
                     </div></div>
@@ -63,12 +63,12 @@
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
-                        <span class='survey-question'>How would you rate your computer skills?</span>
+                        <span class='survey-question required '>How would you rate your computer skills?</span>
                     </div>
                     <div class='row center__ID'>
                         <div class='col-sm'>
                             <span class='survey-answer'>poor</span><br />
-                            <input type='radio' name='EDU_computer' value='0'>
+                            <input type='radio' name='EDU_computer' value='0' required >
                         </div>
                         <div class='col-sm'>
                             <span class='survey-answer'>below average</span><br />
@@ -92,11 +92,11 @@
                     <!-- Question and Answerset -->
                     <div class='row row__ID'><div class='col'>
                     <div class='row'>
-                        <span class='survey-question'>How many hours per week do you use the computer?</span>
+                        <span class='survey-question required'>How many hours per week do you use the computer?</span>
                     </div>
                     <div class='row'>
                         <div class='col-sm-2'>
-                            <input type='number' class='form-control' name='EDU_compUse'/>
+                            <input type='number' class='form-control' name='EDU_compUse' required />
                         </div>
                         <div class='col-sm-10'>
                             <span class='survey-answer'>hours/week</span>
